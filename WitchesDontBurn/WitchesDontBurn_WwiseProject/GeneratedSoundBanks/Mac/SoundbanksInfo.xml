@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{C3730BDD-8059-DF33-40D7-86B9A537F875}">
+		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{AFD412D6-7791-86DB-5AA8-90C15F10CE01}">
 			<ShortName>WDB_MasterSB</ShortName>
 			<Path>WDB_MasterSB.bnk</Path>
 			<Media>
@@ -45,5 +45,5 @@
 			</Busses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DDF2453E-D2CA-D5AC-89C2-2FAB21A0C8CD}</FileHash>
+	<FileHash>{EA39B63B-3F38-012E-5ECD-0658FD176FE5}</FileHash>
 </SoundBanksInfo>
