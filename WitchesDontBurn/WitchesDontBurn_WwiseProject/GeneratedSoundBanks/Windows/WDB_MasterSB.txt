@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	202194903	Music_Play			\Default Work Unit\Music_Play	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	208710280	WDB_Music_Intro	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\WDB_Music_Intro_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\WDB_Music\WDB_Music_Intro\WDB_Music_Intro		1738260
+	1061503968	WDB_Music_Loop	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\WDB_Music_Loop_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\WDB_Music\WDB_Music_Loop\WDB_Music_Loop		13827836
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{C3730BDD-8059-DF33-40D7-86B9A537F875}">
+			<ShortName>WDB_MasterSB</ShortName>
+			<Path>WDB_MasterSB.bnk</Path>
+			<Media>
+				<File Id="208710280" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WDB_Music_Intro.wav</ShortName>
+					<CachePath>SFX/WDB_Music_Intro_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="1061503968" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WDB_Music_Loop.wav</ShortName>
+					<CachePath>SFX/WDB_Music_Loop_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="202194903" Name="Music_Play" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="208710280"/>
+						<MediaRef Id="1061503968"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{6EC57807-A4FA-91BB-DC85-F7F20FAF95CD}</FileHash>
+</SoundBanksInfo>
