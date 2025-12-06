@@ -34,12 +34,10 @@ public class WindowStatus : MonoBehaviour
     private void Awake()
     {
         col = GetComponent<Collider2D>();
-        if (col != null && !col.isTrigger)
+        if (col != null)
         {
-            Debug.LogWarning($"WindowStatus: Collider on '{name}' is not a trigger. It is recommended to set it as trigger for detection.");
+            col.isTrigger = true; // 直接把窗戶 collider 設為 Trigger（不會阻擋）
         }
-
-        // initialize visual states
         UpdateVisuals();
     }
 

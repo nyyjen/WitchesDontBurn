@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8210654499066289076}
   - component: {fileID: 2051638818768751146}
   - component: {fileID: 535539765617329158}
+  - component: {fileID: 4698521802034571617}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Untagged
@@ -124,6 +125,10 @@ MonoBehaviour:
   moveSpeed: 1
   maxWaterCapacity: 6
   currentWater: 3
+  waterProjectilePrefab: {fileID: 0}
+  shootOrigin: {fileID: 0}
+  shootSpeed: 10
+  shootCooldown: 0.3
 --- !u!50 &5524924833519957340
 Rigidbody2D:
   serializedVersion: 5
@@ -232,6 +237,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.48, y: 0.64}
   m_Direction: 0
+--- !u!210 &4698521802034571617
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231922637116271341}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1 &8337836353939167870
 GameObject:
   m_ObjectHideFlags: 0

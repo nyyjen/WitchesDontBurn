@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5353166228258752903}
   - component: {fileID: 4183812117219338577}
+  - component: {fileID: 914843916383191663}
   m_Layer: 0
   m_Name: ShootingWater
   m_TagString: ShootingWater
@@ -90,3 +91,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &914843916383191663
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4265031558974433701}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_SortAtRoot: 0

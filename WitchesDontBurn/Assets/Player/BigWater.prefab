@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5891563635946532684}
   - component: {fileID: 8468384478485214089}
   - component: {fileID: -6627047024843306564}
+  - component: {fileID: 3508240439590661577}
   m_Layer: 0
   m_Name: BigWater
   m_TagString: BigWater
@@ -170,3 +171,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyOutOfBounds
   destroyYPosition: -10
+--- !u!210 &3508240439590661577
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739795435776079726}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_SortAtRoot: 0
