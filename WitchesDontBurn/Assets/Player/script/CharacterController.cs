@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CharacterController : MonoBehaviour
 {
@@ -68,10 +69,12 @@ public class CharacterController : MonoBehaviour
     {
         // cooldown
         if (Time.time < lastShootTime + shootCooldown) return;
-
         if (currentWater <= 0) return;
 
-        Vector3 mouseScreen = Input.mousePosition;
+        // ✔ 使用新 Input System 讀滑鼠座標
+        if (Mouse.current == null) return;
+        Vector2 mouseScreen = Mouse.current.position.ReadValue();
+
         Camera cam = Camera.main;
         if (cam == null)
         {
@@ -79,12 +82,16 @@ public class CharacterController : MonoBehaviour
             return;
         }
 
-        Vector3 mouseWorld = cam.ScreenToWorldPoint(mouseScreen);
+        Vector3 mouseWorld = cam.ScreenToWorldPoint(new Vector3(mouseScreen.x, mouseScreen.y, 0f));
         mouseWorld.z = 0f;
 
+        // origin
         Vector2 origin = shootOrigin != null ? (Vector2)shootOrigin.position : (Vector2)transform.position;
+
+        // direction
         Vector2 direction = (mouseWorld - (Vector3)origin).normalized;
 
+        // prefab
         if (waterProjectilePrefab == null)
         {
             Debug.LogWarning("ShootWater: waterProjectilePrefab is not assigned.");
@@ -95,18 +102,16 @@ public class CharacterController : MonoBehaviour
         Rigidbody2D prb = proj.GetComponent<Rigidbody2D>();
         if (prb == null)
             prb = proj.AddComponent<Rigidbody2D>();
+
         prb.gravityScale = 0f;
         prb.linearVelocity = direction * shootSpeed;
 
-        // optional: tag projectile so other systems can detect it
-        try { proj.tag = "WaterProjectile"; } catch { }
+        // tag
+        try { proj.tag = "ShootingWater"; } catch { }
 
-        // destroy after time to avoid clutter
         Destroy(proj, 5f);
 
         currentWater--;
         lastShootTime = Time.time;
     }
-
-
 }

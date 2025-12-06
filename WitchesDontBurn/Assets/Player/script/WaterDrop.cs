@@ -34,7 +34,8 @@ public class WaterDrop : MonoBehaviour
     
     private void OnEnable()
     {
-        StartCoroutine(SpawnLoop());
+        StartCoroutine(SmallWaterLoop());
+        StartCoroutine(BigWaterLoop());
     }
 
     private void OnDisable()
@@ -42,7 +43,7 @@ public class WaterDrop : MonoBehaviour
         StopAllCoroutines();
     }
 
-    private IEnumerator SpawnLoop()
+    private IEnumerator SmallWaterLoop()
     {
         while (true)
         {
@@ -54,28 +55,40 @@ public class WaterDrop : MonoBehaviour
                 continue;
             }
 
-            float currentWater = characterController.currentWater; 
-
-            if (currentWater <= 2f)
+            if (characterController.currentWater <= 4f)
             {
-                while (characterController != null && characterController.currentWater < 6f)
-                {
-                    SpawnPrefab(BigWater);
-                    float wait = Random.Range(5f, 7f);
-                    yield return new WaitForSeconds(wait);
-                }
+                Debug.Log($"[WaterDrop] Spawning SmallWater, current={characterController.currentWater}");
+                SpawnPrefab(SmallWater);
+                yield return new WaitForSeconds(Random.Range(3f, 5f));
+            }
+            else
+            {
+                yield return new WaitForSeconds(1f);
+            }
+        }
+    }
+
+    private IEnumerator BigWaterLoop()
+    {
+        while (true)
+        {
+            if (characterController == null)
+            {
+                yield return new WaitForSeconds(1f);
+                if (player != null)
+                    characterController = player.GetComponent<CharacterController>();
                 continue;
             }
 
-            if (currentWater <= 4f)
+            if (characterController.currentWater <= 2f)
             {
-                while (characterController != null && characterController.currentWater < 6f)
-                {
-                    SpawnPrefab(SmallWater);
-                    float wait = Random.Range(3f, 5f);
-                    yield return new WaitForSeconds(wait);
-                }
-                continue;
+                Debug.Log($"[WaterDrop] Spawning BigWater, current={characterController.currentWater}");
+                SpawnPrefab(BigWater);
+                yield return new WaitForSeconds(Random.Range(5f, 7f));
+            }
+            else
+            {
+                yield return new WaitForSeconds(1f);
             }
         }
     }

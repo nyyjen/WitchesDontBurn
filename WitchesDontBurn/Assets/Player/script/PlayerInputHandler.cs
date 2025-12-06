@@ -5,6 +5,12 @@ public class PlayerInputHandler : MonoBehaviour
 {
     private InputAction flyActions, broomActions, shootWater;
     private CharacterController characterController;
+    private System.Action<InputAction.CallbackContext> carryCallback;
+    private System.Action<InputAction.CallbackContext> shootCallback;
+    // flags set by input callbacks, processed in Update to avoid doing game logic inside callbacks
+    private bool broomRequested = false;
+    private bool shootRequested = false;
+    
 
     private void Awake()
     {
@@ -12,6 +18,15 @@ public class PlayerInputHandler : MonoBehaviour
         flyActions = InputSystem.actions.FindAction("Move");
         broomActions = InputSystem.actions.FindAction("Interact");
         shootWater = InputSystem.actions.FindAction("Attack");
+        // prepare the callbacks so removes will always match adds
+        // callbacks only set a flag — real work runs in Update()
+        carryCallback = (ctx) => {
+            broomRequested = true;
+        };
+
+        shootCallback = (ctx) => {
+            shootRequested = true;
+        };
     }
 
     private void OnEnable()
@@ -21,15 +36,15 @@ public class PlayerInputHandler : MonoBehaviour
 
         if (broomActions != null)
         {
-            broomActions.performed -= Carry;  // 先移除舊訂閱
-            broomActions.performed += Carry;
+            broomActions.performed -= carryCallback;
+            broomActions.performed += carryCallback;
             broomActions.Enable();
         }
 
         if (shootWater != null)
         {
-            shootWater.performed -= ShootWater;  // 先移除舊訂閱
-            shootWater.performed += ShootWater;
+            shootWater.performed -= shootCallback;
+            shootWater.performed += shootCallback;
             shootWater.Enable();
         }
     }
@@ -38,13 +53,13 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (broomActions != null)
         {
-            broomActions.performed -= Carry;
+            broomActions.performed -= carryCallback;
             broomActions.Disable();
         }
 
         if (shootWater != null)
         {
-            shootWater.performed -= ShootWater;
+            shootWater.performed -= shootCallback;
             shootWater.Disable();
         }
 
@@ -70,13 +85,26 @@ public class PlayerInputHandler : MonoBehaviour
     
     void Update()
     {
-        if (flyActions == null || characterController == null)
+        if (flyActions != null && characterController != null)
         {
-            return;
+            Vector2 moveInput = flyActions.ReadValue<Vector2>();
+            characterController.Move(moveInput);
         }
 
-        Vector2 moveInput = flyActions.ReadValue<Vector2>();
-        characterController.Move(moveInput);
+        // process requests queued by input callbacks — do gameplay work here (safe)
+        if (broomRequested)
+        {
+            broomRequested = false;
+            if (characterController != null)
+                characterController.UseBroom();
+        }
+
+        if (shootRequested)
+        {
+            shootRequested = false;
+            if (characterController != null)
+                characterController.ShootWater();
+        }
     }
 
 
