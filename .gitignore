@@ -27,11 +27,9 @@ ProjectSettings/Packages/com.unity.polybrush/Settings.json
 
 # Wwise Plugin
 Assets/Wwise/Editor/ProjectData/
-Assets/StreamingAssets/Audio/GeneratedSoundBanks/Mac/
-Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/
+
 
 # Wwise Project
-WwiseProject/IncrementalSoundBankData.xml
 WwiseProject/.cache/
 WwiseProject/.backup/
 WwiseProject/*.akd
@@ -40,7 +38,7 @@ WwiseProject/*.prof
 WwiseProject/*.validationcache
 WwiseProject/*.wsettings
 *.akd
-*.bnk
+
 
 
 # Code Editors
