@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    private InputAction flyActions, broomActions;
+    private InputAction flyActions, broomActions, shootWater;
     private CharacterController characterController;
 
     private void Awake()
@@ -11,6 +11,7 @@ public class PlayerInputHandler : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         flyActions = InputSystem.actions.FindAction("Move");
         broomActions = InputSystem.actions.FindAction("Interact");
+        shootWater = InputSystem.actions.FindAction("Attack");
 
 
         // enable actions and subscribe safely
@@ -26,6 +27,13 @@ public class PlayerInputHandler : MonoBehaviour
             broomActions.Enable();
         }
 
+        if (shootWater != null)
+        {
+            shootWater.performed += ShootWater;
+            shootWater.Enable();
+        }
+        
+
     }
 
     private void Carry(InputAction.CallbackContext context)
@@ -33,6 +41,14 @@ public class PlayerInputHandler : MonoBehaviour
         if (characterController != null)
         {
             characterController.UseBroom();
+        }
+    }
+
+    private void ShootWater(InputAction.CallbackContext context)
+    {
+        if (characterController != null)
+        {
+            characterController.ShootWater();
         }
     }
     
