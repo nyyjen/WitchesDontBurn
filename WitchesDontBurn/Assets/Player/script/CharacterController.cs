@@ -3,11 +3,13 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private int maxWaterCapacity = 6;
+    [SerializeField] public int currentWater = 3;
     private Rigidbody2D rb;
     private Vector2 move;
     private bool CarryRequested = false;
     private Animator animator;
-    
+
 
     private void Start()
     {
@@ -43,6 +45,12 @@ public class CharacterController : MonoBehaviour
     {
         // Handle skill usage logic here
         CarryRequested = true;
+    }
+
+    public bool CanCarry()
+    {
+
+        return currentWater < maxWaterCapacity;
     }
 
 
