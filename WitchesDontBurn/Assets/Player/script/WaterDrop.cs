@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class WaterDrop : MonoBehaviour
@@ -108,12 +109,29 @@ public class WaterDrop : MonoBehaviour
         // apply gravity scale and drag correctly for Rigidbody2D
         rb.gravityScale = dropGravityScale;
         rb.linearDamping = dropLinearDrag;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         // optional: use a constant fall speed instead of physics
         if (useConstantFallSpeed)
         {
             rb.gravityScale = 0f;
             rb.linearVelocity = new Vector2(0f, -Mathf.Abs(constantFallSpeed));
+        }
+
+        // Ignore collisions with walls by finding all wall colliders and ignoring them
+        Collider2D[] wallColliders = GameObject.FindGameObjectsWithTag("wall")
+            .SelectMany(go => go.GetComponents<Collider2D>())
+            .ToArray();
+
+        Collider2D waterCollider = instance.GetComponent<Collider2D>();
+        if (waterCollider == null)
+        {
+            waterCollider = instance.AddComponent<BoxCollider2D>();
+        }
+
+        foreach (Collider2D wallCollider in wallColliders)
+        {
+            Physics2D.IgnoreCollision(waterCollider, wallCollider, true);
         }
     }
 }
