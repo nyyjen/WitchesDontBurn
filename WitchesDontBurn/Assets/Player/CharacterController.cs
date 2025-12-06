@@ -2,14 +2,17 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 1f;
     private Rigidbody2D rb;
     private Vector2 move;
     private bool CarryRequested = false;
+    private Animator animator;
+    
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         rb.gravityScale = 0f;
         rb.linearDamping = 0f;
     }
@@ -34,6 +37,7 @@ public class CharacterController : MonoBehaviour
     {
         // Use the PlayerInputHandler to get movement input
         move = moveVector;
+        animator.SetBool("isFlying", true);
     }
     public void UseBroom()
     {
