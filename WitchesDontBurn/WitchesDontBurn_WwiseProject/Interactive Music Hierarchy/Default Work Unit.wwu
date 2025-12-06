@@ -1,6 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1771321E-2843-4611-80FA-DCD0A74C5DEF}" SchemaVersion="119">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{1771321E-2843-4611-80FA-DCD0A74C5DEF}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1771321E-2843-4611-80FA-DCD0A74C5DEF}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="WDB_Music" ID="{D6150597-A23A-4209-9504-B63AC757FB71}" ShortID="702749125">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="23"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25999D80-3750-4045-9363-21B1E831D29D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8BAD3FF8-3664-47EE-A7F9-A3392133EA67}"/>
+						</Reference>
+						<Reference Name="PlaylistRoot">
+							<Custom>
+								<MusicPlaylistItem Name="" ID="{099A5B61-8756-4A65-88CA-D10FDBB8E0CE}" ShortID="190175755">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{F18CA057-056D-4231-B642-15BE43B185DF}" ShortID="901396056">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="WDB_Music_Intro" ID="{8E7F7BA4-19FD-4291-86D5-EE836911D20B}" WorkUnitID="{1771321E-2843-4611-80FA-DCD0A74C5DEF}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{D8338ADA-534E-474A-BFDC-241299AC58D4}" ShortID="723359255">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="WDB_Music_Loop" ID="{3E222DBB-DAEE-4289-A50E-9A65CCE71C8A}" WorkUnitID="{1771321E-2843-4611-80FA-DCD0A74C5DEF}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Custom>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{F03C327B-1740-4C5D-BA03-3FBC7B8CD1F3}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{FC7C6659-9C59-4FE6-8B3E-55846813235E}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="WDB_Music_Intro" ID="{8E7F7BA4-19FD-4291-86D5-EE836911D20B}" ShortID="726247936">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="9853.53741496599"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25999D80-3750-4045-9363-21B1E831D29D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8BAD3FF8-3664-47EE-A7F9-A3392133EA67}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="WDB_Music_Intro" ID="{CC92C069-3501-4D8D-8A4A-FCD305B0A5AB}" ShortID="322521219">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8BAD3FF8-3664-47EE-A7F9-A3392133EA67}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{930DCA9D-4D94-4BDF-A33C-54ED6A282BCB}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WDB_Music_Intro" ID="{685B47CF-7363-4FFD-B0D9-A9DD96A0F3B3}">
+											<Language>SFX</Language>
+											<AudioFile>WDB_Music_Intro.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="208710280"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{4C80502C-8791-4B23-87EA-CB2A50E7AD19}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="WDB_Music_Intro" ID="{9C533765-9A06-4CFD-B86C-9465A90CFDC8}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="9853.53741496599"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="WDB_Music_Intro" ID="{685B47CF-7363-4FFD-B0D9-A9DD96A0F3B3}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{5432EF4C-C198-4C05-839C-6CDA5A76D849}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{C3C44A72-C1F4-4EB0-BB6D-32DE4BCF376E}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="9853.53741496599"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="WDB_Music_Loop" ID="{3E222DBB-DAEE-4289-A50E-9A65CCE71C8A}" ShortID="141499165">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="78388.5487528345"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25999D80-3750-4045-9363-21B1E831D29D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8BAD3FF8-3664-47EE-A7F9-A3392133EA67}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="WDB_Music_Loop" ID="{82298A5C-3F13-44E3-89B1-D6F500174CC5}" ShortID="63236780">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8BAD3FF8-3664-47EE-A7F9-A3392133EA67}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{EB6E7811-4A2C-4E87-834A-87DF3D2C9335}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WDB_Music_Loop" ID="{8E74A34D-30A1-413B-900D-50361F5D2447}">
+											<Language>SFX</Language>
+											<AudioFile>WDB_Music_Loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1061503968"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{B25B94EC-EC33-47B3-B269-20EBB22658F6}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="WDB_Music_Loop" ID="{008EBEFA-5151-4E87-86AB-86CA710AF7F1}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="78388.5487528345"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="WDB_Music_Loop" ID="{8E74A34D-30A1-413B-900D-50361F5D2447}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{ACF4E4E2-7E91-412F-A7B5-B62C09BA969E}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{F609A0B1-91A1-4163-B6A1-959E57A6B94C}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="78388.5487528345"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>
