@@ -3,14 +3,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    private InputAction flyActions, castActions;
+    private InputAction flyActions, broomActions;
     private CharacterController characterController;
 
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
         flyActions = InputSystem.actions.FindAction("Move");
-        castActions = InputSystem.actions.FindAction("Attack");
+        broomActions = InputSystem.actions.FindAction("Interact");
 
 
         // enable actions and subscribe safely
@@ -20,19 +20,19 @@ public class PlayerInputHandler : MonoBehaviour
         }
 
 
-        if (castActions != null)
+        if (broomActions != null)
         {
-            castActions.performed += Cast;
-            castActions.Enable();
+            broomActions.performed += Carry;
+            broomActions.Enable();
         }
 
     }
 
-    private void Cast(InputAction.CallbackContext context)
+    private void Carry(InputAction.CallbackContext context)
     {
         if (characterController != null)
         {
-            characterController.UseSkillA();
+            characterController.UseBroom();
         }
     }
     
@@ -47,16 +47,5 @@ public class PlayerInputHandler : MonoBehaviour
         characterController.Move(moveInput);
     }
 
-    private void OnDestroy()
-    {
-        if (castActions != null)
-        {
-            castActions.performed -= Cast;
-            castActions.Disable();
-        }
-        if (flyActions != null)
-        {
-            flyActions.Disable();
-        }
-    }
+
 }

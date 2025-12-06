@@ -5,7 +5,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 move;
-    private bool skillARequested = false;
+    private bool CarryRequested = false;
 
     private void Start()
     {
@@ -18,10 +18,10 @@ public class CharacterController : MonoBehaviour
     {
         // Use the PlayerInputHandler to get movement input
         rb.linearVelocity = move * moveSpeed;
-        if (skillARequested)
+        if (CarryRequested)
         {
             // Execute skill A logic here
-            skillARequested = false;
+            CarryRequested = false;
         }
         if (move.x != 0)
         {
@@ -35,10 +35,10 @@ public class CharacterController : MonoBehaviour
         // Use the PlayerInputHandler to get movement input
         move = moveVector;
     }
-    public void UseSkillA()
+    public void UseBroom()
     {
         // Handle skill usage logic here
-        skillARequested = true;
+        CarryRequested = true;
     }
 
 
