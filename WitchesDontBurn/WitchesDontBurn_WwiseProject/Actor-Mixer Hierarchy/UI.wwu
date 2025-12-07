@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{347E3334-CC04-4F6A-8EE7-094CA5AB3E2A}" SchemaVersion="119" RootDocumentID="{E4FA4BBD-3582-49B1-A62C-4954FA092211}" ParentDocumentID="{E4FA4BBD-3582-49B1-A62C-4954FA092211}">
+	<AudioObjects>
+		<WorkUnit Name="UI" ID="{347E3334-CC04-4F6A-8EE7-094CA5AB3E2A}" OwnerID="{E4FA4BBD-3582-49B1-A62C-4954FA092211}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="4"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Sound Name="UI_ButtonClick" ID="{EB364BDB-A933-42E0-B9F0-21CCDD2718EA}" ShortID="219669643">
+					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25999D80-3750-4045-9363-21B1E831D29D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8BAD3FF8-3664-47EE-A7F9-A3392133EA67}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI_ButtonClick" ID="{88D63D00-7794-478D-A62B-23BC5E4FCFF0}">
+							<Language>SFX</Language>
+							<AudioFile>UI_ButtonClick.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="176668512"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="UI_ButtonClick" ID="{88D63D00-7794-478D-A62B-23BC5E4FCFF0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="UI_ButtonHover" ID="{812B512F-E561-48AC-8A7B-B981E7E98CDC}" ShortID="381927726">
+					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25999D80-3750-4045-9363-21B1E831D29D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8BAD3FF8-3664-47EE-A7F9-A3392133EA67}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI_ButtonHover" ID="{0CEA9F8D-AE2C-4A0D-9D3F-F3FA998E8F82}">
+							<Language>SFX</Language>
+							<AudioFile>UI_ButtonHover.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="671635145"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="UI_ButtonHover" ID="{0CEA9F8D-AE2C-4A0D-9D3F-F3FA998E8F82}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

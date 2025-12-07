@@ -12,11 +12,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Window
+  - Ground
   - Water
   - UI
   - BigWater
-  - 
+  - Wall
   - 
   - 
   - 
@@ -45,14 +45,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: AlwaysInBack
-    uniqueID: 1547882185
-    locked: 0
-  - name: Medium
-    uniqueID: 585955683
-    locked: 0
-  - name: AlwaysOnTop
-    uniqueID: 2449463171
+  - name: cat
+    uniqueID: 3612175277
     locked: 0
   m_RenderingLayers:
   - Default

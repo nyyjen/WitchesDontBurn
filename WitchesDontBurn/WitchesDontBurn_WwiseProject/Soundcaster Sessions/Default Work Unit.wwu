@@ -6,12 +6,23 @@
 				<SoundcasterSession Name="WDB_Soundcaster" ID="{46458234-C929-4F6D-85FA-ECC407A820ED}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="WDB_Music" ID="{D6150597-A23A-4209-9504-B63AC757FB71}" WorkUnitID="{1771321E-2843-4611-80FA-DCD0A74C5DEF}"/>
+							<ObjectRef Name="WDB_Music_Old" ID="{D6150597-A23A-4209-9504-B63AC757FB71}" WorkUnitID="{1771321E-2843-4611-80FA-DCD0A74C5DEF}"/>
 							<Position X="0" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="WDB_Music" ID="{46CD322A-D23E-405F-B65E-9BC0DF0F3390}" WorkUnitID="{1771321E-2843-4611-80FA-DCD0A74C5DEF}"/>
+							<Position X="1" Y="0"/>
+						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="PlayerSpeed" ID="{3449E4E4-DB47-4535-8534-ED756BFA4B44}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="MusicGameplay" ID="{F990F747-61ED-464A-A423-D7CA082DB9F4}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>
