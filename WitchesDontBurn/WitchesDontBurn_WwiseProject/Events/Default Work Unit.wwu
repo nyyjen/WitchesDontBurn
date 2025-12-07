@@ -221,6 +221,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="SFX_WaterSpray_Play" ID="{01F4D912-3CC7-4160-9A46-272F502D2B9B}">
+					<ChildrenList>
+						<Action Name="" ID="{02143DCB-1D8D-487E-A05E-9DAB209D7A2E}" ShortID="907784099">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_WaterSpray" ID="{5D1A2B72-CD5C-4697-BCAA-38A4A7F98AEC}" WorkUnitID="{62AF510D-413B-481D-A989-F14C978987CE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_WaterSpray_Stop" ID="{4F3BFED2-C613-4CED-A3CA-9C62284C38AC}">
+					<ChildrenList>
+						<Action Name="" ID="{261AFE25-FF45-4328-84FF-16B4EB663173}" ShortID="812216504">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_WaterSpray" ID="{5D1A2B72-CD5C-4697-BCAA-38A4A7F98AEC}" WorkUnitID="{62AF510D-413B-481D-A989-F14C978987CE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

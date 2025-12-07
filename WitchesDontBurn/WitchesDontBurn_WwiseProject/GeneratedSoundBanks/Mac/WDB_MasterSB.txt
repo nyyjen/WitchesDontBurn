@@ -6,16 +6,19 @@ Event	ID	Name			Wwise Object Path	Notes
 	839254991	SFX_FireOut			\Default Work Unit\SFX_FireOut	
 	1165918729	SFX_MagicHit			\Default Work Unit\SFX_MagicHit	
 	1661332665	SFX_PickupWater_Big			\Default Work Unit\SFX_PickupWater_Big	
+	1728813734	SFX_WaterSpray_Play			\Default Work Unit\SFX_WaterSpray_Play	
 	1813357456	SFX_WitchFlyingLoop_Stop			\Default Work Unit\SFX_WitchFlyingLoop_Stop	
 	1851655779	SFX_MagicCast			\Default Work Unit\SFX_MagicCast	
 	1853415142	SFX_OnFire_Small			\Default Work Unit\SFX_OnFire_Small	
 	1993946054	SFX_PickupWater_Small			\Default Work Unit\SFX_PickupWater_Small	
 	2381502256	Amb_Play			\Default Work Unit\Amb_Play	
+	3579918232	SFX_WaterSpray_Stop			\Default Work Unit\SFX_WaterSpray_Stop	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1493153371	PlayerSpeed			\Default Work Unit\PlayerSpeed	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	64591615	SFX_WaterSpray_Init	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_WaterSpray_Init_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_WaterSpray\SFX_WaterSpray_Init		93602
 	125960812	SFX_FireOut_2	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_FireOut_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireOut\SFX_FireOut_2		220072
 	130284267	SFX_FireOut_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_FireOut_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireOut\SFX_FireOut_1		223424
 	177974528	SFX_FireBurst_Low_3	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_FireBurst_Low_3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireBurst_Low\SFX_FireBurst_Low_3		120046
@@ -48,6 +51,7 @@ Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	
 	446594407	SFX_FireLoop_Low_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_FireLoop_Low_0_0ED99DD8.wem	446594407.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireLoop_Low\SFX_FireLoop_Low_0	
 	526404489	Amb_Scatterer_3	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\Amb_Scatterer_3_818F3B66.wem	526404489.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_Ambience\Amb\Amb_Scatterer\Amb_Scatterer_3	
 	630890796	SFX_FireLoop_Low_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_FireLoop_Low_1_851C9E6C.wem	630890796.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireLoop_Low\SFX_FireLoop_Low_1	
+	715733555	SFX_WaterSpray_Loop	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_WaterSpray_Loop_11A93380.wem	715733555.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_WaterSpray\SFX_WaterSpray_Loop	
 	793362413	SFX_FireLoop_High_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_FireLoop_High_0_4106BC05.wem	793362413.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireLoop_High\SFX_FireLoop_High_0	
 	797972709	Amb_Scatterer_6	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\Amb_Scatterer_6_818F3B66.wem	797972709.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_Ambience\Amb\Amb_Scatterer\Amb_Scatterer_6	
 	813118264	Amb_Scatterer_5	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\Amb_Scatterer_5_818F3B66.wem	813118264.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_Ambience\Amb\Amb_Scatterer\Amb_Scatterer_5	

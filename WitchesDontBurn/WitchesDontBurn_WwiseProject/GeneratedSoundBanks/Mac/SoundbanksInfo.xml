@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{DF75E115-1E1F-6125-D1E2-CF459460F319}">
+		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{ADF5B629-B1BC-D581-EA8C-F61A0592630A}">
 			<ShortName>WDB_MasterSB</ShortName>
 			<Path>WDB_MasterSB.bnk</Path>
 			<Media>
@@ -22,6 +22,10 @@
 					<ShortName>Amb_Scatterer_2.wav</ShortName>
 					<Path>Media/63265067.wem</Path>
 					<CachePath>SFX/Amb_Scatterer_2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="64591615" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_WaterSpray_Init.wav</ShortName>
+					<CachePath>SFX/SFX_WaterSpray_Init_818F3B66.wem</CachePath>
 				</File>
 				<File Id="72938217" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>Amb_Scatterer_1.wav</ShortName>
@@ -101,6 +105,11 @@
 					<ShortName>SFX_FireLoop_Low_1.wav</ShortName>
 					<Path>Media/630890796.wem</Path>
 					<CachePath>SFX/SFX_FireLoop_Low_1_851C9E6C.wem</CachePath>
+				</File>
+				<File Id="715733555" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SFX_WaterSpray_Loop.wav</ShortName>
+					<Path>Media/715733555.wem</Path>
+					<CachePath>SFX/SFX_WaterSpray_Loop_11A93380.wem</CachePath>
 				</File>
 				<File Id="780700293" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireBurst_High_2.wav</ShortName>
@@ -240,6 +249,13 @@
 						<MediaRef Id="918590193"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1728813734" Name="SFX_WaterSpray_Play" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="64591615"/>
+						<MediaRef Id="715733555"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3579918232" Name="SFX_WaterSpray_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="770241710" Name="SFX_WitchFlyingLoop_Play" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="368636961"/>
@@ -268,5 +284,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BE492C7F-1224-8F1E-CF50-8EC4DD6DCBF5}</FileHash>
+	<FileHash>{05208343-9585-E360-1FAC-B43172D077D9}</FileHash>
 </SoundBanksInfo>
