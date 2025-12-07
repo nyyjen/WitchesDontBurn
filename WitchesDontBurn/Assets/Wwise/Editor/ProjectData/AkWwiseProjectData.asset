@@ -94,8 +94,42 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 7ac9b33dd008b940bd6d576d044e1015
     GuidInternal: 
-    m_lastTime: -8584365819089830948
+    m_lastTime: -8584365355094521867
     List:
+    - name: Amb_Play
+      guid: f09d92dc1cc6d843bf0331bb7a40171a
+      id: 2381502256
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: Amb_Play
+        ObjectType: 3
+        guid: f09d92dc1cc6d843bf0331bb7a40171a
+      Path: Events\Default Work Unit\Amb_Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Amb_Stop
+      guid: a448d61d3c26044bb183db98c16fb8ce
+      id: 729984210
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: Amb_Stop
+        ObjectType: 3
+        guid: a448d61d3c26044bb183db98c16fb8ce
+      Path: Events\Default Work Unit\Amb_Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Music_Play
       guid: d56209a26d92a94482e45046a07e5c00
       id: 202194903

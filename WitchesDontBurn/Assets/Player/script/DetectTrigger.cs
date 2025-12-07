@@ -12,14 +12,12 @@ public class DetectTrigger : MonoBehaviour
     public GameObject npcOnWindow = null;
     void Awake()
     {
-        // try to get CharacterController on this object, or parent (in case this script is on a child pickup zone)
         characterController = GetComponent<CharacterController>();
         if (characterController == null)
             characterController = GetComponentInParent<CharacterController>();
     }
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        // If the collider belongs to a child of the water prefab, use root to find the prefab root
         GameObject hitObject = other.gameObject;
         if (other.transform.root != null && other.transform.root != other.transform)
         {

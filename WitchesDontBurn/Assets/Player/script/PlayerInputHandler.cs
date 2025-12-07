@@ -7,10 +7,8 @@ public class PlayerInputHandler : MonoBehaviour
     private InputAction flyActions, broomActions, shootWater;
     private CharacterController characterController;
     private System.Action<InputAction.CallbackContext> carryCallback;
-    private System.Action<InputAction.CallbackContext> shootCallback;
     // flags set by input callbacks, processed in Update to avoid doing game logic inside callbacks
     private bool broomRequested = false;
-    private bool shootRequested = false;
     private float holdTime = 0f;      
     private bool hasFired = false;  
     
@@ -25,10 +23,6 @@ public class PlayerInputHandler : MonoBehaviour
         // callbacks only set a flag — real work runs in Update()
         carryCallback = (ctx) => {
             broomRequested = true;
-        };
-
-        shootCallback = (ctx) => {
-            shootRequested = true;
         };
     }
 
@@ -46,8 +40,8 @@ public class PlayerInputHandler : MonoBehaviour
 
         if (shootWater != null)
         {
-            shootWater.performed -= shootCallback;
-            shootWater.performed += shootCallback;
+            shootWater.performed -= carryCallback;
+            shootWater.performed += carryCallback;
             shootWater.Enable();
         }
     }
@@ -62,7 +56,7 @@ public class PlayerInputHandler : MonoBehaviour
 
         if (shootWater != null)
         {
-            shootWater.performed -= shootCallback;
+            shootWater.performed -= carryCallback;
             shootWater.Disable();
         }
 
@@ -133,7 +127,7 @@ public class PlayerInputHandler : MonoBehaviour
             {
                 holdTime += Time.deltaTime;
 
-                if (!hasFired && holdTime >= 0.1f)
+                if (!hasFired && holdTime >= 0.5f)
                 {
                     characterController.ShootWater();
                     hasFired = true;
@@ -163,13 +157,6 @@ public class PlayerInputHandler : MonoBehaviour
                 DropNPC();
                 return;
             }
-        }
-
-        if (shootRequested)
-        {
-            shootRequested = false;
-            if (characterController != null)
-                characterController.ShootWater();
         }
     }
 
