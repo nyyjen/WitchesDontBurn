@@ -434,4 +434,88 @@ public class NPCBehaviour : MonoBehaviour
         // If NPC is at window and player picks it up, this will be called
         // But the actual pickup is handled by PlayerInputHandler
     }
+    
+    // Transform NPC to cat
+    public void TransformToCat(CharacterController playerController)
+    {
+        if (playerController == null || !playerController.CanTransformToCat()) return;
+        if (isBeingPickedUp || isWalking) return; // Don't transform if NPC is being picked up or walking
+        
+        // Use transform count
+        playerController.UseTransformCount();
+        
+        // Stop all coroutines
+        StopAllCoroutines();
+        
+        // Start transformation sequence
+        StartCoroutine(TransformToCatSequence(playerController));
+    }
+    
+    private IEnumerator TransformToCatSequence(CharacterController playerController)
+    {
+        Vector3 npcPosition = transform.position;
+        
+        // NPC disappears immediately
+        if (animator != null)
+        {
+            animator.enabled = false;
+        }
+        SpriteRenderer npcRenderer = GetComponent<SpriteRenderer>();
+        if (npcRenderer != null)
+        {
+            npcRenderer.enabled = false;
+        }
+        if (col != null) col.enabled = false;
+        
+        // Disable all other components to make NPC invisible but keep it alive for the coroutine
+        MonoBehaviour[] components = GetComponents<MonoBehaviour>();
+        foreach (var comp in components)
+        {
+            if (comp != this && comp != null)
+            {
+                comp.enabled = false;
+            }
+        }
+        
+        // Spawn magic effect
+        GameObject magicInstance = null;
+        if (playerController.magicPrefab != null)
+        {
+            magicInstance = Instantiate(playerController.magicPrefab, npcPosition, Quaternion.identity);
+        }
+        
+        // Wait for magic effect - check if magic has Animator, otherwise use default time
+        float magicWaitTime = 1.0f; // Default wait time
+        if (magicInstance != null)
+        {
+            Animator magicAnimator = magicInstance.GetComponent<Animator>();
+            if (magicAnimator != null && magicAnimator.runtimeAnimatorController != null)
+            {
+                // If magic has animator, wait for animation to complete
+                // Get the length of the first animation clip
+                AnimationClip[] clips = magicAnimator.runtimeAnimatorController.animationClips;
+                if (clips != null && clips.Length > 0)
+                {
+                    magicWaitTime = clips[0].length;
+                }
+            }
+        }
+        
+        yield return new WaitForSeconds(magicWaitTime);
+        
+        // Destroy magic effect
+        if (magicInstance != null)
+        {
+            Destroy(magicInstance);
+        }
+        
+        // Spawn cat at the same position
+        if (playerController.catPrefab != null)
+        {
+            Instantiate(playerController.catPrefab, npcPosition, Quaternion.identity);
+        }
+        
+        // Destroy NPC
+        Destroy(gameObject);
+    }
 }

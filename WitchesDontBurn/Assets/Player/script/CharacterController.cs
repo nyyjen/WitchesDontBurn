@@ -34,6 +34,16 @@ public class CharacterController : MonoBehaviour
     public bool isCarryingNPC = false;
     public GameObject npcOnWindow = null;
     public GameObject npcPrefabToDrop;
+    
+    [Header("Transform to Cat")]
+    [Tooltip("Maximum number of times player can transform NPCs to cats")]
+    public int maxTransformCount = 9;
+    [Tooltip("Current remaining transform count")]
+    public int remainingTransformCount = 9;
+    [Tooltip("Magic effect prefab")]
+    public GameObject magicPrefab;
+    [Tooltip("Cat prefab to spawn")]
+    public GameObject catPrefab;
 
 
     private void Start()
@@ -42,7 +52,21 @@ public class CharacterController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb.gravityScale = 0f;
         rb.linearDamping = 0f;
+        remainingTransformCount = maxTransformCount;
         AkSoundEngine.PostEvent("SFX_WitchFlyingLoop_Play", gameObject);
+    }
+    
+    public bool CanTransformToCat()
+    {
+        return remainingTransformCount > 0;
+    }
+    
+    public void UseTransformCount()
+    {
+        if (remainingTransformCount > 0)
+        {
+            remainingTransformCount--;
+        }
     }
 
     private void FixedUpdate()

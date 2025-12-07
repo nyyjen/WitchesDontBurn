@@ -4,11 +4,12 @@ using System.Collections;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    private InputAction flyActions, broomActions, shootWater;
+    private InputAction flyActions, broomActions, shootWater, rightClickAction;
     private CharacterController characterController;
     private System.Action<InputAction.CallbackContext> carryCallback;
     // flags set by input callbacks, processed in Update to avoid doing game logic inside callbacks
     private bool broomRequested = false;
+    private bool rightClickRequested = false;
     private float holdTime = 0f;      
     private bool hasFired = false;
     private bool hasTriggeredWatering = false; // Track if isWatering trigger has been set  
@@ -20,6 +21,7 @@ public class PlayerInputHandler : MonoBehaviour
         flyActions = InputSystem.actions.FindAction("Move");
         broomActions = InputSystem.actions.FindAction("Interact");
         shootWater = InputSystem.actions.FindAction("Attack");
+        rightClickAction = InputSystem.actions.FindAction("RightClick");
         // prepare the callbacks so removes will always match adds
         // callbacks only set a flag — real work runs in Update()
         carryCallback = (ctx) => {
@@ -45,6 +47,12 @@ public class PlayerInputHandler : MonoBehaviour
             shootWater.performed += carryCallback;
             shootWater.Enable();
         }
+        
+        if (rightClickAction != null)
+        {
+            rightClickAction.performed += OnRightClick;
+            rightClickAction.Enable();
+        }
     }
 
     private void OnDisable()
@@ -60,9 +68,20 @@ public class PlayerInputHandler : MonoBehaviour
             shootWater.performed -= carryCallback;
             shootWater.Disable();
         }
+        
+        if (rightClickAction != null)
+        {
+            rightClickAction.performed -= OnRightClick;
+            rightClickAction.Disable();
+        }
 
         if (flyActions != null)
             flyActions.Disable();
+    }
+    
+    private void OnRightClick(InputAction.CallbackContext context)
+    {
+        rightClickRequested = true;
     }
 
     private void Carry(InputAction.CallbackContext context)
@@ -180,6 +199,50 @@ public class PlayerInputHandler : MonoBehaviour
             {
                 DropNPC();
                 return;
+            }
+        }
+        
+        // Handle right click to transform NPC to cat
+        if (rightClickRequested)
+        {
+            rightClickRequested = false;
+            HandleRightClickTransform();
+        }
+    }
+    
+    private void HandleRightClickTransform()
+    {
+        if (!characterController.CanTransformToCat()) return;
+        
+        // Check if mouse is over an NPC
+        if (Mouse.current == null) return;
+        Vector2 mouseScreen = Mouse.current.position.ReadValue();
+        
+        Camera cam = Camera.main;
+        if (cam == null) return;
+        
+        Vector3 mouseWorld = cam.ScreenToWorldPoint(new Vector3(mouseScreen.x, mouseScreen.y, 0f));
+        mouseWorld.z = 0f;
+        
+        // Raycast to find NPC under mouse
+        RaycastHit2D hit = Physics2D.Raycast(mouseWorld, Vector2.zero, 0.1f);
+        
+        if (hit.collider != null)
+        {
+            GameObject hitObject = hit.collider.gameObject;
+            NPCBehaviour npcBehaviour = hitObject.GetComponent<NPCBehaviour>();
+            
+            // Also check parent
+            if (npcBehaviour == null && hitObject.transform.parent != null)
+            {
+                npcBehaviour = hitObject.transform.parent.GetComponent<NPCBehaviour>();
+                hitObject = hitObject.transform.parent.gameObject;
+            }
+            
+            if (npcBehaviour != null)
+            {
+                // Transform NPC to cat
+                npcBehaviour.TransformToCat(characterController);
             }
         }
     }
