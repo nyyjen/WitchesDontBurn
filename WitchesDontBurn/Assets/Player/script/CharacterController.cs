@@ -3,12 +3,16 @@ using UnityEngine.InputSystem;
 
 public class CharacterController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float maxMoveSpeed = 8f;
+    [SerializeField] private float acceleration = 3f;
+    [SerializeField] private float moveSpeed = 0f;
+    
     [SerializeField] public int maxWaterCapacity = 6;
     [SerializeField] public int currentWater = 3;
     private Rigidbody2D rb;
     private Vector2 move;
     private bool CarryRequested = false;
+    
     private Animator animator;
     
     [Header("Shooting")]
@@ -39,6 +43,18 @@ public class CharacterController : MonoBehaviour
     private void FixedUpdate()
     {
         // Use the PlayerInputHandler to get movement input
+        if (move == Vector2.zero)
+        {
+            moveSpeed = 0f;
+        }
+        else
+        {
+            // 有在移動才加速
+            if (moveSpeed < maxMoveSpeed)
+            {
+                moveSpeed += acceleration * Time.fixedDeltaTime;
+            }
+        }
         rb.linearVelocity = move * moveSpeed;
         if (CarryRequested)
         {
@@ -51,6 +67,7 @@ public class CharacterController : MonoBehaviour
             scale.x = Mathf.Sign(move.x) * Mathf.Abs(scale.x); 
             transform.localScale = scale;
         }
+        AkSoundEngine.SetRTPCValue("PlayerSpeed", move.magnitude * moveSpeed, gameObject);
     }
     public void Move(Vector2 moveVector)
     {

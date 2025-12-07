@@ -544,7 +544,7 @@ Transform:
   m_GameObject: {fileID: 601326458}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.36, z: 0}
+  m_LocalPosition: {x: 0, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1199,6 +1199,11 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.48, y: 0.64}
   m_Direction: 0
+--- !u!4 &866190986 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5040298985883225698, guid: e3101eb0b3d3ec742af8fad0142714c1, type: 3}
+  m_PrefabInstance: {fileID: 5928712964429041658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &944643861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,6 +2434,18 @@ PrefabInstance:
       value: 107845861
       objectReference: {fileID: 0}
     - target: {fileID: 5040298985883225698, guid: e3101eb0b3d3ec742af8fad0142714c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040298985883225698, guid: e3101eb0b3d3ec742af8fad0142714c1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040298985883225698, guid: e3101eb0b3d3ec742af8fad0142714c1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040298985883225698, guid: e3101eb0b3d3ec742af8fad0142714c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2470,8 +2487,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5137721694952042744, guid: e3101eb0b3d3ec742af8fad0142714c1, type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5137721694952042744, guid: e3101eb0b3d3ec742af8fad0142714c1, type: 3}
+      propertyPath: shootOrigin
+      value: 
+      objectReference: {fileID: 866190986}
+    - target: {fileID: 5137721694952042744, guid: e3101eb0b3d3ec742af8fad0142714c1, type: 3}
+      propertyPath: waterProjectilePrefab
+      value: 
+      objectReference: {fileID: 428952925811999950, guid: 1b79dfd0102a0e045ab2fca88541a295, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
