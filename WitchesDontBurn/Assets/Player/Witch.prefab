@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8210654499066289076}
   - component: {fileID: 2051638818768751146}
   - component: {fileID: 535539765617329158}
+  - component: {fileID: 572604683817287668}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Untagged
@@ -83,10 +84,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 107845861
+  m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1406794419296527070, guid: ede6cbad9b0f14547ab802cc8b70084b, type: 3}
+  m_Sprite: {fileID: -7248369391846253383, guid: cc518f8fe761e9d4a8dc2c604879e5b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,9 +122,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f48e885d7089045a15fcee0b9f1a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  moveSpeed: 1
+  maxMoveSpeed: 8
+  acceleration: 3
+  moveSpeed: 0
   maxWaterCapacity: 6
   currentWater: 3
+  waterProjectilePrefab: {fileID: 428952925811999950, guid: 1b79dfd0102a0e045ab2fca88541a295, type: 3}
+  shootOrigin: {fileID: 5040298985883225698}
+  shootSpeed: 10
+  shootCooldown: 0.3
+  isCarryingNPC: 0
+  npcOnWindow: {fileID: 0}
+  npcPrefabToDrop: {fileID: 0}
 --- !u!50 &5524924833519957340
 Rigidbody2D:
   serializedVersion: 5
@@ -232,6 +242,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.48, y: 0.64}
   m_Direction: 0
+--- !u!114 &572604683817287668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231922637116271341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de124d5292cc0f549bcdd3862e674d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectTrigger
+  inWindowRange: 0
+  inGroundRange: 0
+  npcOnWindow: {fileID: 0}
 --- !u!1 &8337836353939167870
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,3 +339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de124d5292cc0f549bcdd3862e674d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectTrigger
+  inWindowRange: 0
+  inGroundRange: 0
+  npcOnWindow: {fileID: 0}

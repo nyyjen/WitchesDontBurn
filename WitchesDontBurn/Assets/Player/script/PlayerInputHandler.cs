@@ -10,7 +10,8 @@ public class PlayerInputHandler : MonoBehaviour
     // flags set by input callbacks, processed in Update to avoid doing game logic inside callbacks
     private bool broomRequested = false;
     private float holdTime = 0f;      
-    private bool hasFired = false;  
+    private bool hasFired = false;
+    private bool hasTriggeredWatering = false; // Track if isWatering trigger has been set  
     
 
     private void Awake()
@@ -126,17 +127,40 @@ public class PlayerInputHandler : MonoBehaviour
             if (attackValue > 0.5f)   
             {
                 holdTime += Time.deltaTime;
+                
+                // Set isWatering trigger when charging (before firing) - only once
+                if (holdTime > 0f && holdTime < 0.5f && !hasFired && !hasTriggeredWatering)
+                {
+                    if (characterController != null)
+                    {
+                        characterController.SetWateringTrigger();
+                        hasTriggeredWatering = true;
+                    }
+                }
 
                 if (!hasFired && holdTime >= 0.5f)
                 {
-                    characterController.ShootWater();
+                    if (characterController != null)
+                    {
+                        characterController.ShootWater();
+                    }
                     hasFired = true;
                 }
             }
             else             
             {
+                // Reset when released
+                if (holdTime > 0f && hasFired)
+                {
+                    // Set isFlying when done shooting
+                    if (characterController != null)
+                    {
+                        characterController.SetFlyingBool(true);
+                    }
+                }
                 holdTime = 0f;
-                hasFired = false;      
+                hasFired = false;
+                hasTriggeredWatering = false; // Reset watering trigger flag
             }
         }
 

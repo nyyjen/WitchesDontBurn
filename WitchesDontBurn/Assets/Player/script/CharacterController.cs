@@ -25,6 +25,10 @@ public class CharacterController : MonoBehaviour
     [Tooltip("Seconds between shots")]
     public float shootCooldown = 0.3f;
     private float lastShootTime = -Mathf.Infinity;
+    [Tooltip("Maximum distance to shoot water at window")]
+    public float maxShootDistance = 10f;
+    [Tooltip("Distance threshold for near vs far shooting animation")]
+    public float nearFarThreshold = 5f;
     
     [Header("NPC Carrying")]
     public bool isCarryingNPC = false;
@@ -64,7 +68,7 @@ public class CharacterController : MonoBehaviour
         if (move.x != 0)
         {
             Vector3 scale = transform.localScale;
-            scale.x = Mathf.Sign(move.x) * Mathf.Abs(scale.x); 
+            scale.x = -Mathf.Sign(move.x) * Mathf.Abs(scale.x); 
             transform.localScale = scale;
         }
         AkSoundEngine.SetRTPCValue("PlayerSpeed", move.magnitude * moveSpeed, gameObject);
@@ -87,6 +91,22 @@ public class CharacterController : MonoBehaviour
         return currentWater < maxWaterCapacity;
     }
 
+    public void SetWateringTrigger()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("isWatering");
+        }
+    }
+
+    public void SetFlyingBool(bool value)
+    {
+        if (animator != null)
+        {
+            animator.SetBool("isFlying", value);
+        }
+    }
+
     public void ShootWater()
     {
         // cooldown
@@ -97,6 +117,7 @@ public class CharacterController : MonoBehaviour
         Vector2 mouseScreen = Mouse.current.position.ReadValue();
 
         Camera cam = Camera.main;
+        if (cam == null) return;
 
         Vector3 mouseWorld = cam.ScreenToWorldPoint(new Vector3(mouseScreen.x, mouseScreen.y, 0f));
         mouseWorld.z = 0f;
@@ -104,22 +125,77 @@ public class CharacterController : MonoBehaviour
         // origin
         Vector2 origin = shootOrigin != null ? (Vector2)shootOrigin.position : (Vector2)transform.position;
 
-        // direction
+        // Check if mouse is over a window using raycast
         Vector2 direction = (mouseWorld - (Vector3)origin).normalized;
-
-        GameObject proj = Instantiate(waterProjectilePrefab, origin, Quaternion.identity);
-        Rigidbody2D prb = proj.GetComponent<Rigidbody2D>();
-        if (prb == null)
-            prb = proj.AddComponent<Rigidbody2D>();
-
-        prb.gravityScale = 0f;
-        prb.linearVelocity = direction * shootSpeed;
-
-        // tag
-        try { proj.tag = "ShootingWater"; } catch { }
-
-        Destroy(proj, 5f);
-
+        float distance = Vector2.Distance(origin, mouseWorld);
+        
+        // Check if mouse position hits a window
+        RaycastHit2D hit = Physics2D.Raycast(origin, direction, distance);
+        GameObject hitWindow = null;
+        
+        if (hit.collider != null)
+        {
+            GameObject hitObject = hit.collider.gameObject;
+            // Check if it's a window or find window in parent
+            if (hitObject.CompareTag("Window"))
+            {
+                hitWindow = hitObject;
+            }
+            else
+            {
+                // Check parent
+                Transform parent = hitObject.transform.parent;
+                if (parent != null && parent.CompareTag("Window"))
+                {
+                    hitWindow = parent.gameObject;
+                }
+            }
+        }
+        
+        // If no window found via raycast, try finding closest window to mouse position
+        if (hitWindow == null)
+        {
+            GameObject[] windows = GameObject.FindGameObjectsWithTag("Window");
+            float closestDist = float.MaxValue;
+            foreach (GameObject window in windows)
+            {
+                float dist = Vector2.Distance(mouseWorld, window.transform.position);
+                if (dist < closestDist)
+                {
+                    closestDist = dist;
+                    hitWindow = window;
+                }
+            }
+            // Check if the closest window is close enough to mouse position (within 2 units)
+            if (closestDist > 2f)
+            {
+                hitWindow = null;
+            }
+        }
+        
+        // Check if window is within shooting range
+        if (hitWindow == null)
+        {
+            return; // No valid window target
+        }
+        
+        float windowDistance = Vector2.Distance(origin, hitWindow.transform.position);
+        if (windowDistance > maxShootDistance)
+        {
+            return; // Window too far
+        }
+        
+        // Set animation triggers based on distance
+        if (windowDistance <= nearFarThreshold)
+        {
+            animator.SetTrigger("isWateringNear");
+        }
+        else
+        {
+            animator.SetTrigger("isWateringFar");
+        }
+        
+        // Don't create projectile - just trigger animation
         currentWater--;
         lastShootTime = Time.time;
     }
