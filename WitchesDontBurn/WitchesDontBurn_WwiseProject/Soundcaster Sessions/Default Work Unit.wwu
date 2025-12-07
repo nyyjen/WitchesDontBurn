@@ -6,12 +6,92 @@
 				<SoundcasterSession Name="WDB_Soundcaster" ID="{46458234-C929-4F6D-85FA-ECC407A820ED}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="WDB_Music_Old" ID="{D6150597-A23A-4209-9504-B63AC757FB71}" WorkUnitID="{1771321E-2843-4611-80FA-DCD0A74C5DEF}"/>
+							<ObjectRef Name="Music_Play" ID="{A20962D5-926D-44A9-82E4-5046A07E5C00}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="WDB_Music" ID="{46CD322A-D23E-405F-B65E-9BC0DF0F3390}" WorkUnitID="{1771321E-2843-4611-80FA-DCD0A74C5DEF}"/>
+							<ObjectRef Name="Amb_Play" ID="{DC929DF0-C61C-43D8-BF03-31BB7A40171A}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_ButtonHover" ID="{A9AE9413-87F8-4CA4-8E87-1983E5B06DF3}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_ButtonClick" ID="{5F018C4F-6DE6-4B12-8E84-D076E2826F53}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_WaterSpray_Play" ID="{01F4D912-3CC7-4160-9A46-272F502D2B9B}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_WitchFlyingLoop_Play" ID="{B40DF2DE-5DDD-425B-9B96-3594A20EDD12}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_MagicCast" ID="{606C209E-9AA3-4516-89E9-505DA236D827}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_OnFire_Small" ID="{D598C8DC-8D24-46ED-9139-F1787E0575E0}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_PickupWater_Small" ID="{D3DDFC65-26F0-402B-8454-CE0620A9CC9B}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_WaterSpray_Stop" ID="{4F3BFED2-C613-4CED-A3CA-9C62284C38AC}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_WitchFlyingLoop_Stop" ID="{AF481EDF-E443-4AD1-ABDE-34ED03458247}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_MagicHit" ID="{69B3D2DA-A436-4A73-88B2-A5D4F3A5B902}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_OnFire_Big" ID="{4B6C8592-B9F8-499C-B414-D4EDA35BA647}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_PickupWater_Big" ID="{F6B46B6E-FC6E-4968-A773-1ECD262BBCD5}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="VO_Help_Boy" ID="{2F7BEB0C-F3B3-401C-91EA-3A6875570491}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="VO_Help_Girl" ID="{3D0B129E-E317-4C33-960E-49363E960F72}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="VO_Help_Old" ID="{48ADC7E9-C430-4ACF-99A3-8F8CC0DF213A}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_FireOut" ID="{CB32F3FF-93BB-4762-9F5F-A56A5102963F}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_Ambulance" ID="{F12E41B5-2B6A-4F59-8B00-D823060721A7}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="3" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="VO_Help_Dog" ID="{B726F5E1-6F3A-4F5E-AED8-7AB4801C01F9}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="VO_Help_Man" ID="{2A0FCA7F-4A61-4189-A54B-B0985A12FAE8}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="VO_Help_Woman" ID="{B4D42D81-785D-495F-B702-92F17A75D3F1}" WorkUnitID="{3DB3C97A-08D0-40B9-BD6D-576D044E1015}"/>
+							<Position X="4" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">

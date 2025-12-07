@@ -16,8 +16,7 @@ namespace AK
         static const AkUniqueID AMB_PLAY = 2381502256U;
         static const AkUniqueID AMB_STOP = 729984210U;
         static const AkUniqueID MUSIC_PLAY = 202194903U;
-        static const AkUniqueID PLAY_UI_BUTTONCLICK = 996302017U;
-        static const AkUniqueID PLAY_UI_BUTTONHOVER = 3314295595U;
+        static const AkUniqueID SFX_AMBULANCE = 493547557U;
         static const AkUniqueID SFX_FIREOUT = 839254991U;
         static const AkUniqueID SFX_MAGICCAST = 1851655779U;
         static const AkUniqueID SFX_MAGICHIT = 1165918729U;
@@ -29,6 +28,8 @@ namespace AK
         static const AkUniqueID SFX_WATERSPRAY_STOP = 3579918232U;
         static const AkUniqueID SFX_WITCHFLYINGLOOP_PLAY = 770241710U;
         static const AkUniqueID SFX_WITCHFLYINGLOOP_STOP = 1813357456U;
+        static const AkUniqueID UI_BUTTONCLICK = 2157992122U;
+        static const AkUniqueID UI_BUTTONHOVER = 2027123568U;
         static const AkUniqueID VO_HELP_BOY = 85455021U;
         static const AkUniqueID VO_HELP_DOG = 3844524185U;
         static const AkUniqueID VO_HELP_GIRL = 33492411U;
