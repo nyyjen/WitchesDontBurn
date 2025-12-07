@@ -80,6 +80,7 @@ public class NPCBehaviour : MonoBehaviour
             if (animator != null)
             {
                 animator.SetTrigger("isCalling");
+                PlayCallingSound();
             }
             
             // Find associated window
@@ -89,7 +90,38 @@ public class NPCBehaviour : MonoBehaviour
             CheckForBigFire();
         }
     }
-    
+
+    private void PlayCallingSound()
+    {
+        string npcName = gameObject.name.ToLower();
+
+        // Map NPC names to carrying parameters
+        if (npcName.Contains("boy"))
+        {
+            AkSoundEngine.PostEvent("VO_Help_Boy", gameObject);
+        }
+        else if (npcName.Contains("girl"))
+        {
+            AkSoundEngine.PostEvent("VO_Help_Girl", gameObject);
+        }
+        else if (npcName.Contains("men") || npcName.Contains("man"))
+        {
+            AkSoundEngine.PostEvent("VO_Help_Man", gameObject);
+        }
+        else if (npcName.Contains("women") || npcName.Contains("woman"))
+        {
+            AkSoundEngine.PostEvent("VO_Help_Woman", gameObject);
+        }
+        else if (npcName.Contains("dog") || npcName.Contains("puppy"))
+        {
+            AkSoundEngine.PostEvent("VO_Help_Dog", gameObject);
+        }
+        else if (npcName.Contains("elder"))
+        {
+            AkSoundEngine.PostEvent("VO_Help_Old", gameObject);
+        }
+    }
+
     private bool CheckIfOnGround()
     {
         if (col == null) return false;
@@ -160,7 +192,8 @@ public class NPCBehaviour : MonoBehaviour
         
         // Set player's carrying animation parameter based on NPC type
         SetPlayerCarryingAnimation();
-        
+        AkSoundEngine.PostEvent("SFX_ResidentRescued", gameObject);
+
         StartCoroutine(DisappearAfterDelay());
     }
     
