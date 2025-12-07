@@ -268,6 +268,96 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="VO_Help_Woman" ID="{B4D42D81-785D-495F-B702-92F17A75D3F1}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{ECE57379-409E-4EEF-9ED8-3D4954E43A6A}" ShortID="721552163">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Help_Woman" ID="{8B8FC1F2-CFD7-4F7C-938D-057A6FEBE766}" WorkUnitID="{82B697CB-231A-4E07-BC6D-74FE34F37842}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VO_Help_Boy" ID="{2F7BEB0C-F3B3-401C-91EA-3A6875570491}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{2FC252DB-760D-4D54-BBAB-800890F7C2C3}" ShortID="657269848">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Help_Boy" ID="{5B3D7D93-580F-40BC-AD47-30BC454CA888}" WorkUnitID="{82B697CB-231A-4E07-BC6D-74FE34F37842}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VO_Help_Dog" ID="{B726F5E1-6F3A-4F5E-AED8-7AB4801C01F9}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{1E71FCC9-350C-4E39-A99E-44F0BF32459A}" ShortID="1067043620">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Help_Dog" ID="{33BEB6F4-C2FB-40FC-AAD7-E6391193D8BB}" WorkUnitID="{82B697CB-231A-4E07-BC6D-74FE34F37842}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VO_Help_Girl" ID="{3D0B129E-E317-4C33-960E-49363E960F72}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{7BA8E4B0-D50A-4436-80B3-2DF05436A85F}" ShortID="930611163">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Help_Girl" ID="{5210F802-7931-4CE7-B086-0136B15F8ECA}" WorkUnitID="{82B697CB-231A-4E07-BC6D-74FE34F37842}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VO_Help_Man" ID="{2A0FCA7F-4A61-4189-A54B-B0985A12FAE8}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{E8B04EFF-A5A1-40CC-AC8F-FCDAD2CCAE89}" ShortID="660828117">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Help_Man" ID="{2131BB28-54DE-4C20-9898-E9A2C02A5DDE}" WorkUnitID="{82B697CB-231A-4E07-BC6D-74FE34F37842}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VO_Help_Old" ID="{48ADC7E9-C430-4ACF-99A3-8F8CC0DF213A}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{D78AC91C-F2D1-4FF7-9ACA-01E474A22C61}" ShortID="657369656">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Help_Old" ID="{6556A408-5156-47C1-932C-8F4D51E319AA}" WorkUnitID="{82B697CB-231A-4E07-BC6D-74FE34F37842}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

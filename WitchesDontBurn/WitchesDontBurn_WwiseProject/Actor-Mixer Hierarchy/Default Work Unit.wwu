@@ -344,6 +344,7 @@
 					</ActiveSourceList>
 				</Sound>
 				<WorkUnit Name="UI" ID="{347E3334-CC04-4F6A-8EE7-094CA5AB3E2A}" PersistMode="Reference"/>
+				<WorkUnit Name="VO" ID="{82B697CB-231A-4E07-BC6D-74FE34F37842}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

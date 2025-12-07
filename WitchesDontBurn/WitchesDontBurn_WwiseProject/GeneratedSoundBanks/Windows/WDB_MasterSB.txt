@@ -1,10 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
+	33492411	VO_Help_Girl			\Default Work Unit\VO_Help_Girl	
+	85455021	VO_Help_Boy			\Default Work Unit\VO_Help_Boy	
 	202194903	Music_Play			\Default Work Unit\Music_Play	
 	656410073	SFX_OnFire_Big			\Default Work Unit\SFX_OnFire_Big	
 	729984210	Amb_Stop			\Default Work Unit\Amb_Stop	
 	770241710	SFX_WitchFlyingLoop_Play			\Default Work Unit\SFX_WitchFlyingLoop_Play	
 	839254991	SFX_FireOut			\Default Work Unit\SFX_FireOut	
 	996302017	Play_UI_ButtonClick			\Default Work Unit\Play_UI_ButtonClick	
+	1037869593	VO_Help_Woman			\Default Work Unit\VO_Help_Woman	
 	1165918729	SFX_MagicHit			\Default Work Unit\SFX_MagicHit	
 	1661332665	SFX_PickupWater_Big			\Default Work Unit\SFX_PickupWater_Big	
 	1728813734	SFX_WaterSpray_Play			\Default Work Unit\SFX_WaterSpray_Play	
@@ -15,6 +18,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	2381502256	Amb_Play			\Default Work Unit\Amb_Play	
 	3314295595	Play_UI_ButtonHover			\Default Work Unit\Play_UI_ButtonHover	
 	3579918232	SFX_WaterSpray_Stop			\Default Work Unit\SFX_WaterSpray_Stop	
+	3795030108	VO_Help_Old			\Default Work Unit\VO_Help_Old	
+	3844524185	VO_Help_Dog			\Default Work Unit\VO_Help_Dog	
+	3946322943	VO_Help_Man			\Default Work Unit\VO_Help_Man	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	1021618141	MusicState			\Default Work Unit\MusicState	
@@ -29,28 +35,40 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	64591615	SFX_WaterSpray_Init	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_WaterSpray_Init_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_WaterSpray\SFX_WaterSpray_Init		93602
+	116012829	VO_Help_Girl_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Girl_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Help_Girl\VO_Help_Girl_1		123478
 	125960812	SFX_FireOut_2	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireOut_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireOut\SFX_FireOut_2		220072
 	130284267	SFX_FireOut_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireOut_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireOut\SFX_FireOut_1		223424
 	176668512	UI_ButtonClick	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\UI_ButtonClick_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_ButtonClick		153252
 	177974528	SFX_FireBurst_Low_3	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireBurst_Low_3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireBurst_Low\SFX_FireBurst_Low_3		120046
+	207360998	VO_Help_Dog_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Dog_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Help_Dog\VO_Help_Dog_0		139316
 	208710280	WDB_Music_Intro	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\WDB_Music_Intro_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\WDB_Music\WDB_Music_Intro\WDB_Music_Intro\WDB_Music_Intro		1738260
+	220622449	VO_Help_Dog_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Dog_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Help_Dog\VO_Help_Dog_1		265156
 	221818399	SFX_MagicHit_Cat_3	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_MagicHit_Cat_3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_MagicHit\SFX_MagicHit_Cat\SFX_MagicHit_Cat_3		303922
 	225232292	SFX_FireBurst_High_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireBurst_High_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireBurst_High\SFX_FireBurst_High_1		142628
+	235309314	VO_Help_Boy_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Boy_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Help_Boy\VO_Help_Boy_1		71678
 	260053559	SFX_MagicHit_Cat_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_MagicHit_Cat_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_MagicHit\SFX_MagicHit_Cat\SFX_MagicHit_Cat_1		294230
 	276830193	SFX_FireOut_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireOut_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireOut\SFX_FireOut_0		210434
 	304114161	SFX_FireBurst_High_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireBurst_High_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireBurst_High\SFX_FireBurst_High_0		214108
+	306486513	VO_Help_Old_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Old_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Help_Old\VO_Help_Old_1		295618
+	308961409	VO_Help_Woman_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Woman_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Help_Woman\VO_Help_Woman_0		52406
 	311109910	SFX_FireBurst_Low_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireBurst_Low_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireBurst_Low\SFX_FireBurst_Low_1		40380
+	314039841	VO_Help_Man_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Man_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Help_Man\VO_Help_Man_0		64958
 	364020103	SFX_MagicHit_Cat_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_MagicHit_Cat_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_MagicHit\SFX_MagicHit_Cat\SFX_MagicHit_Cat_0		319188
 	671635145	UI_ButtonHover	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\UI_ButtonHover_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_ButtonHover		39292
+	770356160	VO_Help_Woman_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Woman_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Help_Woman\VO_Help_Woman_1		121352
 	780700293	SFX_FireBurst_High_2	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireBurst_High_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireBurst_High\SFX_FireBurst_High_2		148156
 	786349058	SFX_FireBurst_Low_2	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireBurst_Low_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireBurst_Low\SFX_FireBurst_Low_2		119578
 	791978057	SFX_MagicHit_Cat_2	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_MagicHit_Cat_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_MagicHit\SFX_MagicHit_Cat\SFX_MagicHit_Cat_2		326264
 	830636734	SFX_FireBurst_Low_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireBurst_Low_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireBurst_Low\SFX_FireBurst_Low_0		77242
 	834482289	SFX_MagicHit	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_MagicHit_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_MagicHit\SFX_MagicHit		225556
 	840094612	SFX_MagicCast	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_MagicCast_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_MagicCast		92164
+	882194830	VO_Help_Boy_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Boy_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Help_Boy\VO_Help_Boy_0		110640
 	914571091	SFX_FireBurst_High_3	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireBurst_High_3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireBurst_High\SFX_FireBurst_High_3		158150
 	918590193	SFX_PickupWater_Small	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_PickupWater_Small_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_PickupWater_Small		84248
 	923803691	SFX_PickupWater_Big	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_PickupWater_Big_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_PickupWater_Big		99436
+	962416540	VO_Help_Man_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Man_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Help_Man\VO_Help_Man_1		147410
+	1000305893	VO_Help_Old_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Old_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Help_Old\VO_Help_Old_0		161114
+	1035401071	VO_Help_Girl_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Girl_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Help_Girl\VO_Help_Girl_0		150442
 	1061503968	WDB_Music_Loop	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\WDB_Music_Loop_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\WDB_Music\WDB_Music_Loop\WDB_Music_Loop\WDB_Music_Loop		13827836
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes

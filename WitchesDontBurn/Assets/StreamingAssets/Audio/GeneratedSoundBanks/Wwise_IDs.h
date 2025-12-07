@@ -29,6 +29,12 @@ namespace AK
         static const AkUniqueID SFX_WATERSPRAY_STOP = 3579918232U;
         static const AkUniqueID SFX_WITCHFLYINGLOOP_PLAY = 770241710U;
         static const AkUniqueID SFX_WITCHFLYINGLOOP_STOP = 1813357456U;
+        static const AkUniqueID VO_HELP_BOY = 85455021U;
+        static const AkUniqueID VO_HELP_DOG = 3844524185U;
+        static const AkUniqueID VO_HELP_GIRL = 33492411U;
+        static const AkUniqueID VO_HELP_MAN = 3946322943U;
+        static const AkUniqueID VO_HELP_OLD = 3795030108U;
+        static const AkUniqueID VO_HELP_WOMAN = 1037869593U;
     } // namespace EVENTS
 
     namespace STATES

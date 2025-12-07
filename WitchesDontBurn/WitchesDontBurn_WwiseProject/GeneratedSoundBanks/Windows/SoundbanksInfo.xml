@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{16355BE5-28F5-A962-AD2B-7A470071D6D3}">
+		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{9B1ADF5A-D9F3-A41E-0AD9-51938B06FFC4}">
 			<ShortName>WDB_MasterSB</ShortName>
 			<Path>WDB_MasterSB.bnk</Path>
 			<Media>
@@ -31,6 +31,10 @@
 					<ShortName>Amb_Scatterer_1.wav</ShortName>
 					<Path>Media/72938217.wem</Path>
 					<CachePath>SFX/Amb_Scatterer_1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="116012829" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VO_Help_Girl_1.wav</ShortName>
+					<CachePath>SFX/VO_Help_Girl_1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="125960812" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireOut_2.wav</ShortName>
@@ -58,9 +62,17 @@
 					<Path>Media/178363526.wem</Path>
 					<CachePath>SFX/SFX_FireLoop_High_1_04206799.wem</CachePath>
 				</File>
+				<File Id="207360998" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VO_Help_Dog_0.wav</ShortName>
+					<CachePath>SFX/VO_Help_Dog_0_818F3B66.wem</CachePath>
+				</File>
 				<File Id="208710280" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WDB_Music_Intro.wav</ShortName>
 					<CachePath>SFX/WDB_Music_Intro_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="220622449" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VO_Help_Dog_1.wav</ShortName>
+					<CachePath>SFX/VO_Help_Dog_1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="221818399" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_MagicHit_Cat_3.wav</ShortName>
@@ -69,6 +81,10 @@
 				<File Id="225232292" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireBurst_High_1.wav</ShortName>
 					<CachePath>SFX/SFX_FireBurst_High_1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="235309314" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VO_Help_Boy_1.wav</ShortName>
+					<CachePath>SFX/VO_Help_Boy_1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="260053559" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_MagicHit_Cat_1.wav</ShortName>
@@ -82,9 +98,21 @@
 					<ShortName>SFX_FireBurst_High_0.wav</ShortName>
 					<CachePath>SFX/SFX_FireBurst_High_0_818F3B66.wem</CachePath>
 				</File>
+				<File Id="306486513" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VO_Help_Old_1.wav</ShortName>
+					<CachePath>SFX/VO_Help_Old_1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="308961409" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VO_Help_Woman_0.wav</ShortName>
+					<CachePath>SFX/VO_Help_Woman_0_818F3B66.wem</CachePath>
+				</File>
 				<File Id="311109910" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireBurst_Low_1.wav</ShortName>
 					<CachePath>SFX/SFX_FireBurst_Low_1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="314039841" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VO_Help_Man_0.wav</ShortName>
+					<CachePath>SFX/VO_Help_Man_0_818F3B66.wem</CachePath>
 				</File>
 				<File Id="364020103" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_MagicHit_Cat_0.wav</ShortName>
@@ -118,6 +146,10 @@
 					<ShortName>SFX_WaterSpray_Loop.wav</ShortName>
 					<Path>Media/715733555.wem</Path>
 					<CachePath>SFX/SFX_WaterSpray_Loop_11A93380.wem</CachePath>
+				</File>
+				<File Id="770356160" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VO_Help_Woman_1.wav</ShortName>
+					<CachePath>SFX/VO_Help_Woman_1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="780700293" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireBurst_High_2.wav</ShortName>
@@ -158,6 +190,10 @@
 					<ShortName>SFX_MagicCast.wav</ShortName>
 					<CachePath>SFX/SFX_MagicCast_818F3B66.wem</CachePath>
 				</File>
+				<File Id="882194830" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VO_Help_Boy_0.wav</ShortName>
+					<CachePath>SFX/VO_Help_Boy_0_818F3B66.wem</CachePath>
+				</File>
 				<File Id="914571091" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireBurst_High_3.wav</ShortName>
 					<CachePath>SFX/SFX_FireBurst_High_3_818F3B66.wem</CachePath>
@@ -174,6 +210,18 @@
 				<File Id="923803691" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_PickupWater_Big.wav</ShortName>
 					<CachePath>SFX/SFX_PickupWater_Big_818F3B66.wem</CachePath>
+				</File>
+				<File Id="962416540" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VO_Help_Man_1.wav</ShortName>
+					<CachePath>SFX/VO_Help_Man_1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1000305893" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VO_Help_Old_0.wav</ShortName>
+					<CachePath>SFX/VO_Help_Old_0_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1035401071" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>VO_Help_Girl_0.wav</ShortName>
+					<CachePath>SFX/VO_Help_Girl_0_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1061503968" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WDB_Music_Loop.wav</ShortName>
@@ -296,6 +344,42 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="1813357456" Name="SFX_WitchFlyingLoop_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="85455021" Name="VO_Help_Boy" DurationType="OneShot" DurationMin="0.8115873" DurationMax="1.2533333">
+					<MediaRefs>
+						<MediaRef Id="235309314"/>
+						<MediaRef Id="882194830"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3844524185" Name="VO_Help_Dog" DurationType="OneShot" DurationMin="1.5784581" DurationMax="3.0052154">
+					<MediaRefs>
+						<MediaRef Id="207360998"/>
+						<MediaRef Id="220622449"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="33492411" Name="VO_Help_Girl" DurationType="OneShot" DurationMin="1.398889" DurationMax="1.7046032">
+					<MediaRefs>
+						<MediaRef Id="116012829"/>
+						<MediaRef Id="1035401071"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3946322943" Name="VO_Help_Man" DurationType="OneShot" DurationMin="0.7353968" DurationMax="1.6702268">
+					<MediaRefs>
+						<MediaRef Id="314039841"/>
+						<MediaRef Id="962416540"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3795030108" Name="VO_Help_Old" DurationType="OneShot" DurationMin="1.8256009" DurationMax="3.3505895">
+					<MediaRefs>
+						<MediaRef Id="306486513"/>
+						<MediaRef Id="1000305893"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1037869593" Name="VO_Help_Woman" DurationType="OneShot" DurationMin="0.5930839" DurationMax="1.3747846">
+					<MediaRefs>
+						<MediaRef Id="308961409"/>
+						<MediaRef Id="770356160"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1493153371" Name="PlayerSpeed"/>
@@ -336,5 +420,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2695515F-5A87-F2D2-9499-2D78A8BF1C2F}</FileHash>
+	<FileHash>{FE6BF2E0-76BC-8985-A8BB-7CBA22A6E68C}</FileHash>
 </SoundBanksInfo>
