@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 7ac9b33dd008b940bd6d576d044e1015
     GuidInternal: 
-    m_lastTime: -8584365355094521867
+    m_lastTime: -8584365349177448919
     List:
     - name: Amb_Play
       guid: f09d92dc1cc6d843bf0331bb7a40171a
@@ -128,8 +128,8 @@ MonoBehaviour:
         guid: a448d61d3c26044bb183db98c16fb8ce
       Path: Events\Default Work Unit\Amb_Stop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Music_Play
       guid: d56209a26d92a94482e45046a07e5c00
       id: 202194903
@@ -164,6 +164,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.5320635
       minDuration: 2.3847847
+    - name: SFX_MagicCast
+      guid: 9e206c60a39a164589e9505da236d827
+      id: 1851655779
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: SFX_MagicCast
+        ObjectType: 3
+        guid: 9e206c60a39a164589e9505da236d827
+      Path: Events\Default Work Unit\SFX_MagicCast
+      maxAttenuation: 0
+      maxDuration: 0.5219274
+      minDuration: 0.5219274
+    - name: SFX_MagicHit
+      guid: dad2b36936a4734a88b2a5d4f3a5b902
+      id: 1165918729
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: SFX_MagicHit
+        ObjectType: 3
+        guid: dad2b36936a4734a88b2a5d4f3a5b902
+      Path: Events\Default Work Unit\SFX_MagicHit
+      maxAttenuation: 0
+      maxDuration: 4.1980495
+      minDuration: 3.8348527
     - name: SFX_OnFire_Big
       guid: 92856c4bf8b99c49b414d4eda35ba647
       id: 656410073
@@ -198,6 +232,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: SFX_PickupWater_Big
+      guid: 6e6bb4f66efc6849a7731ecd262bbcd5
+      id: 1661332665
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: SFX_PickupWater_Big
+        ObjectType: 3
+        guid: 6e6bb4f66efc6849a7731ecd262bbcd5
+      Path: Events\Default Work Unit\SFX_PickupWater_Big
+      maxAttenuation: 0
+      maxDuration: 0.56315196
+      minDuration: 0.56315196
+    - name: SFX_PickupWater_Small
+      guid: 65fcddd3f0262b408454ce0620a9cc9b
+      id: 1993946054
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: SFX_PickupWater_Small
+        ObjectType: 3
+        guid: 65fcddd3f0262b408454ce0620a9cc9b
+      Path: Events\Default Work Unit\SFX_PickupWater_Small
+      maxAttenuation: 0
+      maxDuration: 0.47705215
+      minDuration: 0.47705215
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -254,9 +322,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584365950057887734
     List: []
-  ExpandedFileSystemItemIds: 
+  ExpandedFileSystemItemIds: 05000000060000000d0000000e000000
   ExpandedWaapiItemIds: 05000000060000000d0000000e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

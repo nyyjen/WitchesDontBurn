@@ -562,7 +562,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 8dc17f09afb63c14ab28ccc51a516d72, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -591,7 +591,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3fbc19d85710340459500683abc01ab3, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 94016930ca57c8c4d8b17f2630f1e48b, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -713,7 +713,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 7c225139a6244b9458520fbea67aad0e, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 9ff7a6cc6f8cf2c4c864119572c32071, type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0
