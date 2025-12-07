@@ -608,6 +608,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1893351514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893351516}
+  - component: {fileID: 1893351515}
+  m_Layer: 0
+  m_Name: UIButtonSoundHover
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1893351515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893351514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc2f24bd1722d24da02b738e7a97b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonSound
+  _uiWwiseEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bf09c3b0d652bea47bd5079b778b6c1d, type: 2}
+--- !u!4 &1893351516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893351514}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1073.1672, y: 29.73609, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!222 &61242300430888936
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -759,8 +807,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: EXIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3c7a9fcf016a5564ea7d65d141ecbbda, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 10be8a10a3b5aae47a5515dbadc93b62, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca73feb2a25ee7c439b716e523ed7d73, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 6f2e12596662ad947be9d66b187db81a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1105,6 +1153,7 @@ GameObject:
   - component: {fileID: 6448418700127386251}
   - component: {fileID: 1348769200976424531}
   - component: {fileID: 4174663426696314215}
+  - component: {fileID: 6448418700127386252}
   m_Layer: 5
   m_Name: Btn_StartGame
   m_TagString: Untagged
@@ -1382,8 +1431,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'CREDITS TO CURLY, GRACE, JEAN, JENNEIFER, TRACY, WENDY, YVELISSE '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3c7a9fcf016a5564ea7d65d141ecbbda, type: 2}
-  m_sharedMaterial: {fileID: -4229693566556159416, guid: 3c7a9fcf016a5564ea7d65d141ecbbda, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1407,7 +1456,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.35
+  m_fontSize: 23.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1703,6 +1752,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3525630750105216537}
   m_CullTransparentMesh: 1
+--- !u!114 &6448418700127386252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3525630750105216537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1893351515}
+          m_TargetAssemblyTypeName: UIButtonSound, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6767736450786373914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +1793,7 @@ GameObject:
   - component: {fileID: 3781678613824712072}
   - component: {fileID: 9201294376138799440}
   - component: {fileID: 6118483457404234340}
+  - component: {fileID: 9201294376138799441}
   m_Layer: 5
   m_Name: Btn_Exit
   m_TagString: Untagged
@@ -1744,8 +1823,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: START GAME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3c7a9fcf016a5564ea7d65d141ecbbda, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 10be8a10a3b5aae47a5515dbadc93b62, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca73feb2a25ee7c439b716e523ed7d73, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 6f2e12596662ad947be9d66b187db81a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2064,6 +2143,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9201294376138799441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6767736450786373914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1893351515}
+          m_TargetAssemblyTypeName: UIButtonSound, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &9207563602652249765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,3 +2200,4 @@ SceneRoots:
   - {fileID: 1280762811}
   - {fileID: 632898808}
   - {fileID: 1757322694}
+  - {fileID: 1893351516}
