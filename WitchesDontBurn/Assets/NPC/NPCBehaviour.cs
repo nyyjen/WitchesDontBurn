@@ -444,11 +444,26 @@ public class NPCBehaviour : MonoBehaviour
         // Use transform count
         playerController.UseTransformCount();
         
+        // Set player's casting animation
+        SetPlayerCastingAnimation();
+        
         // Stop all coroutines
         StopAllCoroutines();
         
         // Start transformation sequence
         StartCoroutine(TransformToCatSequence(playerController));
+    }
+    
+    private void SetPlayerCastingAnimation()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null) return;
+        
+        Animator playerAnimator = player.GetComponent<Animator>();
+        if (playerAnimator == null) return;
+        
+        // Set isCasting trigger
+        playerAnimator.SetTrigger("isCasting");
     }
     
     private IEnumerator TransformToCatSequence(CharacterController playerController)
