@@ -6,6 +6,8 @@ TagManager:
   tags:
   - BigWater
   - SmallWater
+  - Window
+  - NPC
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,10 @@ public class WindowBehaviour : MonoBehaviour
     [SerializeField] public bool isPet;
     [SerializeField] private bool isHuman;
 
+    [SerializeField] private static float maxTimeOnFire = 5.0f;
+    [SerializeField] private static float timeToFireIntensityChange = 2.5f;  
+
+    private bool intensityLevelUp = false;   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,30 +23,58 @@ public class WindowBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void OnTriggerEnter2D(Collider other)
-    {
-       string name = "Model";
-       Transform childTransform = transform.Find(name);
-
-        if(childTransform != null)
+        if( onFire )
         {
-            SpriteRenderer sr = childTransform.gameObject.GetComponent<SpriteRenderer>();
+            timeOnFire += Time.deltaTime;
 
-            if(sr != null )
+            if( timeOnFire >= maxTimeOnFire )
             {
-                sr.material.color = Color.red;
+                // human will jump
+                // pet will die
+
+                //onFire = false;
+
+            }
+            else if(!intensityLevelUp && timeOnFire >= timeToFireIntensityChange)
+            {
+                intensityLevelUp = true;
             }
         }
+
     }
 
-    void OnTriggerStay2D(Collider other)
+    public void StartFire()
+    {
+        onFire = true;
+        timeOnFire = 0.0f;
+        intensityLevelUp = false;
+    }
+
+    public void ResetWindow()
+    {
+        onFire = false;
+    }
+
+   public bool IsOnFire()
+    {
+        return onFire;
+    }
+
+    public bool BurntDown()
+    {
+        return (timeOnFire >= maxTimeOnFire);
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
     {
 
     }
-    void OnTriggerExit2D(Collider other)
+
+    public void OnTriggerStay2D(Collider2D other)
+    {
+
+    }
+    public void OnTriggerExit2D(Collider2D other)
     {
 
     }
