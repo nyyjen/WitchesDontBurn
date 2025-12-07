@@ -14,6 +14,8 @@ public class WindowManager : MonoBehaviour
 
     private GameObject[] WindowList;
     private List<GameObject> NPCs;
+
+    private int numBurntWindows = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,9 +31,30 @@ public class WindowManager : MonoBehaviour
 
         if(eventTimer >= timeToNextEvent)
         {
-            createFireEvent();
-            
+            createFireEvent();   
         }
+
+        foreach(GameObject obj in WindowList)
+        {
+            WindowBehaviour w = obj.GetComponent<WindowBehaviour>();
+
+            if( w )
+            {
+                if( w.HasBurntDown() )
+                {
+                    w.SetBurntWindow();
+                    NPCs.Remove(obj);
+                    numBurntWindows++;
+                    //decrease player points
+                    Debug.Log(numBurntWindows);
+                }
+            }
+        }
+    }
+
+    public bool IsGameOver()
+    {
+        return WindowList.Length == numBurntWindows;
     }
 
     void createFireEvent()
@@ -45,7 +68,7 @@ public class WindowManager : MonoBehaviour
 
             if(w != null)
             {
-                if( w.IsOnFire() == false )
+                if( w.IsOnFire() == false && w.HasBurntDown() == false )
                 {
                    GameObject eventHuman = Instantiate(Human, obj.transform.position, obj.transform.rotation);
                    Debug.Log(w.transform.parent.position);    
