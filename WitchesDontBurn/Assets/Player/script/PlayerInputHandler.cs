@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerInputHandler : MonoBehaviour
     // flags set by input callbacks, processed in Update to avoid doing game logic inside callbacks
     private bool broomRequested = false;
     private bool shootRequested = false;
+    private float holdTime = 0f;      
+    private bool hasFired = false;  
     
 
     private void Awake()
@@ -75,6 +78,15 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
+    private void DropNPC()
+    {
+        characterController.isCarryingNPC = false;
+
+        Vector3 dropPos = characterController.transform.position + new Vector3(0, -1f, 0);
+        Instantiate(characterController.npcPrefabToDrop, dropPos, Quaternion.identity);
+    }
+
+
     private void ShootWater(InputAction.CallbackContext context)
     {
         if (characterController != null)
@@ -82,6 +94,28 @@ public class PlayerInputHandler : MonoBehaviour
             characterController.ShootWater();
         }
     }
+
+    private IEnumerator PickupNPC(GameObject npc)
+    {
+        characterController.isCarryingNPC = true;
+
+        Vector3 start = npc.transform.position;
+        Vector3 end = characterController.transform.position;
+
+        float t = 0f;
+        float duration = 0.6f;
+
+        while (t < duration)
+        {
+            npc.transform.position = Vector3.Lerp(start, end, t / duration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        Destroy(npc);
+        characterController.npcOnWindow = null;
+    }
+
     
     void Update()
     {
@@ -91,12 +125,44 @@ public class PlayerInputHandler : MonoBehaviour
             characterController.Move(moveInput);
         }
 
+        if (shootWater != null)
+        {
+            float attackValue = shootWater.ReadValue<float>(); // 0 or 1
+
+            if (attackValue > 0.5f)   
+            {
+                holdTime += Time.deltaTime;
+
+                if (!hasFired && holdTime >= 0.1f)
+                {
+                    characterController.ShootWater();
+                    hasFired = true;
+                }
+            }
+            else             
+            {
+                holdTime = 0f;
+                hasFired = false;      
+            }
+        }
+
         // process requests queued by input callbacks — do gameplay work here (safe)
         if (broomRequested)
         {
             broomRequested = false;
-            if (characterController != null)
-                characterController.UseBroom();
+            DetectTrigger dt = GetComponentInChildren<DetectTrigger>();
+            if (!characterController.isCarryingNPC && dt.inWindowRange && dt.npcOnWindow != null)
+            {
+                StartCoroutine(PickupNPC(dt.npcOnWindow));
+                return;
+            }
+
+            // 情況 2：抱著 NPC 且站在地上 → 放下
+            if (characterController.isCarryingNPC && dt.inGroundRange)
+            {
+                DropNPC();
+                return;
+            }
         }
 
         if (shootRequested)

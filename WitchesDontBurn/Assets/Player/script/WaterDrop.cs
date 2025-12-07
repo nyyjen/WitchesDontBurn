@@ -21,7 +21,7 @@ public class WaterDrop : MonoBehaviour
     public float dropLinearDrag = 5f;
     [Header("Alternate fall mode")]
     [Tooltip("When true, spawned drops ignore gravity and use a constant downward speed.")]
-    public bool useConstantFallSpeed = false;
+    public bool useConstantFallSpeed = true;
     [Tooltip("Constant downward speed (units/sec) when using constant fall mode")]
     public float constantFallSpeed = 1f;
     
@@ -56,6 +56,12 @@ public class WaterDrop : MonoBehaviour
                 continue;
             }
 
+            if (characterController.currentWater >=  characterController.maxWaterCapacity)
+            {
+                yield return new WaitForSeconds(1f);
+                continue;
+            }
+
             if (characterController.currentWater <= 4f)
             {
                 Debug.Log($"[WaterDrop] Spawning SmallWater, current={characterController.currentWater}");
@@ -78,6 +84,12 @@ public class WaterDrop : MonoBehaviour
                 yield return new WaitForSeconds(1f);
                 if (player != null)
                     characterController = player.GetComponent<CharacterController>();
+                continue;
+            }
+
+            if (characterController.currentWater >=  characterController.maxWaterCapacity)
+            {
+                yield return new WaitForSeconds(1f);
                 continue;
             }
 

@@ -9,6 +9,8 @@ TagManager:
   - Window
   - ShootingWater
   - wall
+  - NPC
+  - ground
   layers:
   - Default
   - TransparentFX

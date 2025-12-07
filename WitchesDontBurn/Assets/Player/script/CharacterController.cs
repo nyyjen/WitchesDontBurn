@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class CharacterController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 1f;
-    [SerializeField] private int maxWaterCapacity = 6;
+    [SerializeField] public int maxWaterCapacity = 6;
     [SerializeField] public int currentWater = 3;
     private Rigidbody2D rb;
     private Vector2 move;
@@ -21,6 +21,11 @@ public class CharacterController : MonoBehaviour
     [Tooltip("Seconds between shots")]
     public float shootCooldown = 0.3f;
     private float lastShootTime = -Mathf.Infinity;
+    
+    [Header("NPC Carrying")]
+    public bool isCarryingNPC = false;
+    public GameObject npcOnWindow = null;
+    public GameObject npcPrefabToDrop;
 
 
     private void Start()
@@ -71,16 +76,10 @@ public class CharacterController : MonoBehaviour
         if (Time.time < lastShootTime + shootCooldown) return;
         if (currentWater <= 0) return;
 
-        // ✔ 使用新 Input System 讀滑鼠座標
         if (Mouse.current == null) return;
         Vector2 mouseScreen = Mouse.current.position.ReadValue();
 
         Camera cam = Camera.main;
-        if (cam == null)
-        {
-            Debug.LogWarning("ShootWater: Camera.main not found.");
-            return;
-        }
 
         Vector3 mouseWorld = cam.ScreenToWorldPoint(new Vector3(mouseScreen.x, mouseScreen.y, 0f));
         mouseWorld.z = 0f;
@@ -90,13 +89,6 @@ public class CharacterController : MonoBehaviour
 
         // direction
         Vector2 direction = (mouseWorld - (Vector3)origin).normalized;
-
-        // prefab
-        if (waterProjectilePrefab == null)
-        {
-            Debug.LogWarning("ShootWater: waterProjectilePrefab is not assigned.");
-            return;
-        }
 
         GameObject proj = Instantiate(waterProjectilePrefab, origin, Quaternion.identity);
         Rigidbody2D prb = proj.GetComponent<Rigidbody2D>();
