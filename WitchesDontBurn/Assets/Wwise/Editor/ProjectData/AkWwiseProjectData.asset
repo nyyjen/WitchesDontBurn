@@ -95,7 +95,6 @@ MonoBehaviour:
     guid: 7ac9b33dd008b940bd6d576d044e1015
     GuidInternal: 
     m_lastTime: -8584365253495059459
-    m_lastTime: -8584365240525578991
     List:
     - name: Amb_Play
       guid: f09d92dc1cc6d843bf0331bb7a40171a
@@ -111,7 +110,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: f09d92dc1cc6d843bf0331bb7a40171a
       Path: Events\Default Work Unit\Amb_Play
-      Path: Events/Default Work Unit/Amb_Play
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -129,7 +127,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: a448d61d3c26044bb183db98c16fb8ce
       Path: Events\Default Work Unit\Amb_Stop
-      Path: Events/Default Work Unit/Amb_Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -164,7 +161,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4f8c015fe66d124b8e84d076e2826f53
       Path: Events\Default Work Unit\Play_UI_ButtonClick
-      Path: Events/Default Work Unit/Play_UI_ButtonClick
       maxAttenuation: 0
       maxDuration: 0.8682313
       minDuration: 0.8682313
@@ -182,7 +178,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1394aea9f887a44c8e871983e5b06df3
       Path: Events\Default Work Unit\Play_UI_ButtonHover
-      Path: Events/Default Work Unit/Play_UI_ButtonHover
       maxAttenuation: 0
       maxDuration: 0.22219954
       minDuration: 0.22219954
@@ -200,7 +195,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: fff332cbbb9362479f5fa56a5102963f
       Path: Events\Default Work Unit\SFX_FireOut
-      Path: Events/Default Work Unit/SFX_FireOut
       maxAttenuation: 0
       maxDuration: 2.5320635
       minDuration: 2.3847847
@@ -218,7 +212,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: 9e206c60a39a164589e9505da236d827
       Path: Events\Default Work Unit\SFX_MagicCast
-      Path: Events/Default Work Unit/SFX_MagicCast
       maxAttenuation: 0
       maxDuration: 0.5219274
       minDuration: 0.5219274
@@ -236,7 +229,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: dad2b36936a4734a88b2a5d4f3a5b902
       Path: Events\Default Work Unit\SFX_MagicHit
-      Path: Events/Default Work Unit/SFX_MagicHit
       maxAttenuation: 0
       maxDuration: 4.1980495
       minDuration: 3.8348527
@@ -254,7 +246,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: 92856c4bf8b99c49b414d4eda35ba647
       Path: Events\Default Work Unit\SFX_OnFire_Big
-      Path: Events/Default Work Unit/SFX_OnFire_Big
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -272,7 +263,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: dcc898d5248ded469139f1787e0575e0
       Path: Events\Default Work Unit\SFX_OnFire_Small
-      Path: Events/Default Work Unit/SFX_OnFire_Small
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -290,7 +280,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: 6e6bb4f66efc6849a7731ecd262bbcd5
       Path: Events\Default Work Unit\SFX_PickupWater_Big
-      Path: Events/Default Work Unit/SFX_PickupWater_Big
       maxAttenuation: 0
       maxDuration: 0.56315196
       minDuration: 0.56315196
@@ -308,7 +297,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: 65fcddd3f0262b408454ce0620a9cc9b
       Path: Events\Default Work Unit\SFX_PickupWater_Small
-      Path: Events/Default Work Unit/SFX_PickupWater_Small
       maxAttenuation: 0
       maxDuration: 0.47705215
       minDuration: 0.47705215
@@ -326,7 +314,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: 12d9f401c73c60419a46272f502d2b9b
       Path: Events\Default Work Unit\SFX_WaterSpray_Play
-      Path: Events/Default Work Unit/SFX_WaterSpray_Play
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -344,7 +331,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: d2fe3b4f13c6ed4ca3ca9c62284c38ac
       Path: Events\Default Work Unit\SFX_WaterSpray_Stop
-      Path: Events/Default Work Unit/SFX_WaterSpray_Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -362,7 +348,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: def20db4dd5d5b429b963594a20edd12
       Path: Events\Default Work Unit\SFX_WitchFlyingLoop_Play
-      Path: Events/Default Work Unit/SFX_WitchFlyingLoop_Play
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -380,7 +365,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: df1e48af43e4d14aabde34ed03458247
       Path: Events\Default Work Unit\SFX_WitchFlyingLoop_Stop
-      Path: Events/Default Work Unit/SFX_WitchFlyingLoop_Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -397,7 +381,6 @@ MonoBehaviour:
     guid: 3b42320b13ab8d42b64d4fb5c4736929
     GuidInternal: 
     m_lastTime: -8584365253494959248
-    m_lastTime: -8584365240525575554
     List:
     - name: PlayerSpeed
       guid: e4e4493447db35458534ed756bfa4b44
@@ -413,7 +396,6 @@ MonoBehaviour:
         ObjectType: 13
         guid: e4e4493447db35458534ed756bfa4b44
       Path: Game Parameters\Default Work Unit\PlayerSpeed
-      Path: Game Parameters/Default Work Unit/PlayerSpeed
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -427,7 +409,6 @@ MonoBehaviour:
     guid: c93e7a5268925a4e92531920c3d3e896
     GuidInternal: 
     m_lastTime: -8584365253486777165
-    m_lastTime: -8584365240523918389
     List:
     - name: MusicState
       guid: da6c38570d13e347b23ecc452265b526
@@ -443,7 +424,6 @@ MonoBehaviour:
         ObjectType: 9
         guid: da6c38570d13e347b23ecc452265b526
       Path: States\Default Work Unit\MusicState
-      Path: States/Default Work Unit/MusicState
       values:
       - name: MusicGameplay
         guid: 47f790f9ed614a46a423d7ca082db9f4
