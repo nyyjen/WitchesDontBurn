@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 7ac9b33dd008b940bd6d576d044e1015
     GuidInternal: 
-    m_lastTime: -8584365253495059459
+    m_lastTime: -8584365223056147321
     List:
     - name: Amb_Play
       guid: f09d92dc1cc6d843bf0331bb7a40171a
@@ -368,6 +368,108 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: VO_Help_Boy
+      guid: 0ceb7b2fb3f31c4091ea3a6875570491
+      id: 85455021
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: VO_Help_Boy
+        ObjectType: 3
+        guid: 0ceb7b2fb3f31c4091ea3a6875570491
+      Path: Events\Default Work Unit\VO_Help_Boy
+      maxAttenuation: 0
+      maxDuration: 1.2533333
+      minDuration: 0.8115873
+    - name: VO_Help_Dog
+      guid: e1f526b73a6f5e4faed87ab4801c01f9
+      id: 3844524185
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: VO_Help_Dog
+        ObjectType: 3
+        guid: e1f526b73a6f5e4faed87ab4801c01f9
+      Path: Events\Default Work Unit\VO_Help_Dog
+      maxAttenuation: 0
+      maxDuration: 3.0052154
+      minDuration: 1.5784581
+    - name: VO_Help_Girl
+      guid: 9e120b3d17e3334c960e49363e960f72
+      id: 33492411
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: VO_Help_Girl
+        ObjectType: 3
+        guid: 9e120b3d17e3334c960e49363e960f72
+      Path: Events\Default Work Unit\VO_Help_Girl
+      maxAttenuation: 0
+      maxDuration: 1.7046032
+      minDuration: 1.398889
+    - name: VO_Help_Man
+      guid: 7fca0f2a614a8941a54bb0985a12fae8
+      id: 3946322943
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: VO_Help_Man
+        ObjectType: 3
+        guid: 7fca0f2a614a8941a54bb0985a12fae8
+      Path: Events\Default Work Unit\VO_Help_Man
+      maxAttenuation: 0
+      maxDuration: 1.6702268
+      minDuration: 0.7353968
+    - name: VO_Help_Old
+      guid: e9c7ad4830c4cf4a99a38f8cc0df213a
+      id: 3795030108
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: VO_Help_Old
+        ObjectType: 3
+        guid: e9c7ad4830c4cf4a99a38f8cc0df213a
+      Path: Events\Default Work Unit\VO_Help_Old
+      maxAttenuation: 0
+      maxDuration: 3.3505895
+      minDuration: 1.8256009
+    - name: VO_Help_Woman
+      guid: 812dd4b45d785f49b70292f17a75d3f1
+      id: 1037869593
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: VO_Help_Woman
+        ObjectType: 3
+        guid: 812dd4b45d785f49b70292f17a75d3f1
+      Path: Events\Default Work Unit\VO_Help_Woman
+      maxAttenuation: 0
+      maxDuration: 1.3747846
+      minDuration: 0.5930839
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
