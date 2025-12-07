@@ -49,7 +49,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: boyRescue
+  m_Name: elderRescue
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -63,7 +63,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c4fca1c5fd309be45b852b666670217e, type: 2}
+  m_Motion: {fileID: 7400000, guid: a5df5a51cfcc7e74aa968e35ff0819cc, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -76,7 +76,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: boyHelp
+  m_Name: elderHelp
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -90,7 +90,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 28e8336449aa1e644986b200852620d6, type: 2}
+  m_Motion: {fileID: 7400000, guid: c436d948877631f49834432315557257, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -183,10 +183,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -3363128807250496752}
-    m_Position: {x: 370, y: 170, z: 0}
+    m_Position: {x: 370, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7103517728179658665}
-    m_Position: {x: 400, y: 70, z: 0}
+    m_Position: {x: 400, y: 20, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions:
