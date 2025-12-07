@@ -32,7 +32,7 @@ public class WindowManager : MonoBehaviour
 
         if(eventTimer >= timeToNextEvent)
         {
-            createFireEvent();   
+            CreateFireEvent();   
         }
 
         foreach(GameObject obj in WindowList)
@@ -58,20 +58,20 @@ public class WindowManager : MonoBehaviour
         return WindowList.Length == numBurntWindows;
     }
 
-    void createFireEvent()
+    void CreateFireEvent()
     {
         eventTimer = 0.0f;
 
-        // find available window
-        foreach( GameObject obj in WindowList )
-        {
-            WindowBehaviour w = obj.GetComponent<WindowBehaviour>();
+        int nextWindowIndex = Random.Range(0, WindowList.GetLength(0));
 
+        WindowBehaviour w = WindowList[nextWindowIndex].GetComponent<WindowBehaviour>();
+
+        // find available window
             if(w != null)
             {
                 if( w.IsOnFire() == false && w.HasBurntDown() == false )
                 {
-                   GameObject eventHuman = Instantiate(Human, obj.transform.position, obj.transform.rotation);
+                   GameObject eventHuman = Instantiate(Human, w.transform.position, w.transform.rotation);
                    Debug.Log(w.transform.parent.position);    
 
                    if(eventHuman)
@@ -79,11 +79,18 @@ public class WindowManager : MonoBehaviour
                         NPCs.Add( eventHuman );
                         w.StartFire();
                         Debug.Log("Created human fire event");
-                        break; //end loop when event has been created
                    }
                 }
             }
+            else
+            {
+                if( numBurntWindows != WindowList.Length)
+                {
+                    CreateFireEvent();
+                }    
+            }
+            
         }  
     
     }
-}
+
