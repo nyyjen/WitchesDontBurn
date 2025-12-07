@@ -12,6 +12,7 @@ public class WindowManager : MonoBehaviour
     [SerializeField] private GameObject Pet = null;
     private float eventTimer = 0.0f;
 
+
     private GameObject[] WindowList;
     private List<GameObject> NPCs;
 
@@ -43,7 +44,7 @@ public class WindowManager : MonoBehaviour
                 if( w.HasBurntDown() )
                 {
                     w.SetBurntWindow();
-                    NPCs.Remove(obj);
+                    //NPCs.Remove(obj);
                     numBurntWindows++;
                     //decrease player points
                     Debug.Log(numBurntWindows);

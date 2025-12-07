@@ -101,7 +101,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="MusicGameplay" ID="{F990F747-61ED-464A-A423-D7CA082DB9F4}"/>
+						<CurrentStateRef Name="MusicScore" ID="{14B9B4DD-CFAD-4BC2-A014-299EF19ABF79}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

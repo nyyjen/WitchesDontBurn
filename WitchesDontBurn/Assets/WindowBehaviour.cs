@@ -19,13 +19,30 @@ public class WindowBehaviour : MonoBehaviour
     [SerializeField] private Sprite vfxBigFire = null;
 
 
-    private bool intensityLevelUp = false;  
+    private bool intensityLevelUp = false;
+    private bool isBurnt = false; 
     private SpriteRenderer sr = null; 
+    public Collider2D targetCollider;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         sr = gameObject.GetComponent<SpriteRenderer>();
+        targetCollider = gameObject.GetComponent<BoxCollider2D>();
+    }
+
+    void Align()
+    {
+        Bounds spriteBounds = sr.bounds;
+        Bounds colliderBounds = targetCollider.bounds;
+
+        float spriteBottom = spriteBounds.min.y;
+        float colliderBottom = colliderBounds.min.y;
+
+        // Move sprite so its bottom aligns with collider bottom
+        float offset = colliderBottom - spriteBottom;
+
+        sr.transform.position += new Vector3(0, offset, 0);
     }
 
     // Update is called once per frame
@@ -48,9 +65,9 @@ public class WindowBehaviour : MonoBehaviour
                 if ( sr && vfxMediumFire)
                 {
                       sr.sprite = vfxMediumFire;
-                      float Xwidth = .75f / vfxMediumFire.bounds.size.x;
-                      float Ywidth = .75f / vfxMediumFire.bounds.size.y;
-                      sr.transform.localScale = new Vector3(Xwidth, Ywidth, 1);
+                      //float Xwidth = .75f / vfxMediumFire.bounds.size.x;
+                      //float Ywidth = .75f / vfxMediumFire.bounds.size.y;
+                      //sr.transform.localScale = new Vector3(Xwidth, Ywidth, 1);
                 }     
             }
         }
@@ -66,9 +83,7 @@ public class WindowBehaviour : MonoBehaviour
         if( sr && vfxSmallFire )
         {
             sr.sprite = vfxSmallFire;
-            float Xwidth = .65f / vfxSmallFire.bounds.size.x;
-            float Ywidth = .65f / vfxSmallFire.bounds.size.y;
-            sr.transform.localScale = new Vector3(Xwidth, Ywidth, 1);
+            Align();
         }
     }
 
@@ -85,12 +100,10 @@ public class WindowBehaviour : MonoBehaviour
 
     public void SetBurntWindow()
     {
-        if( sr && vfxBigFire)
+        if( sr && vfxBigFire && !isBurnt)
         {
             sr.sprite = vfxBigFire;
-            float Xwidth = .65f / vfxBigFire.bounds.size.x;
-            float Ywidth = .65f / vfxBigFire.bounds.size.y;
-            sr.transform.localScale = new Vector3(Xwidth, Ywidth, 1);
+            isBurnt = true;
         }
 
         Debug.Log("Set burnt window");

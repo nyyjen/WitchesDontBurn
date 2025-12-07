@@ -216,6 +216,18 @@ PrefabInstance:
       value: 107845861
       objectReference: {fileID: 0}
     - target: {fileID: 5040298985883225698, guid: e3101eb0b3d3ec742af8fad0142714c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040298985883225698, guid: e3101eb0b3d3ec742af8fad0142714c1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040298985883225698, guid: e3101eb0b3d3ec742af8fad0142714c1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040298985883225698, guid: e3101eb0b3d3ec742af8fad0142714c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.06553
       objectReference: {fileID: 0}
@@ -454,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603117c80e4864639ae935142cc6f316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindowManager
-  timeToNextEvent: 5
+  timeToNextEvent: 3
   Human: {fileID: 8756563158986928062, guid: 2c95f760e26dd49c58bff091a8c2db4f, type: 3}
   Pet: {fileID: 8756563158986928062, guid: 2c95f760e26dd49c58bff091a8c2db4f, type: 3}
 --- !u!1 &1935180030
