@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{D7F4577E-7773-9F0B-7F1D-DE5131597B73}">
+		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{DF75E115-1E1F-6125-D1E2-CF459460F319}">
 			<ShortName>WDB_MasterSB</ShortName>
 			<Path>WDB_MasterSB.bnk</Path>
 			<Media>
@@ -81,6 +81,11 @@
 				<File Id="364020103" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_MagicHit_Cat_0.wav</ShortName>
 					<CachePath>SFX/SFX_MagicHit_Cat_0_818F3B66.wem</CachePath>
+				</File>
+				<File Id="368636961" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SFX_WitchFlyingLoop.wav</ShortName>
+					<Path>Media/368636961.wem</Path>
+					<CachePath>SFX/SFX_WitchFlyingLoop_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="446594407" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SFX_FireLoop_Low_0.wav</ShortName>
@@ -235,7 +240,16 @@
 						<MediaRef Id="918590193"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="770241710" Name="SFX_WitchFlyingLoop_Play" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="368636961"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1813357456" Name="SFX_WitchFlyingLoop_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="1493153371" Name="PlayerSpeed"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3B1E1D1B-67A8-49D5-603F-445A3C69235D}">
 			<ShortName>Init</ShortName>
@@ -254,5 +268,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1FC3FC04-2DA5-BE9E-92F4-8AD499364041}</FileHash>
+	<FileHash>{146706CA-DE95-EBC5-8568-8E63F4886A5A}</FileHash>
 </SoundBanksInfo>

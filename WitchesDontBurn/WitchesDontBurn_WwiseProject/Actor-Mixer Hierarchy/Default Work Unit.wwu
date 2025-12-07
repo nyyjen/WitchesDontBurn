@@ -229,6 +229,120 @@
 						</Sound>
 					</ChildrenList>
 				</BlendContainer>
+				<Sound Name="SFX_WitchFlyingLoop" ID="{5BFC4C08-3DAD-4B82-B670-2771D9BBF1D4}" ShortID="165184294">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="IsStreamingEnabled" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25999D80-3750-4045-9363-21B1E831D29D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8BAD3FF8-3664-47EE-A7F9-A3392133EA67}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_WitchFlyingLoop" ID="{FA2AA40A-933B-46C2-A220-D292E51E2670}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_WitchFlyingLoop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="368636961"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{2005FB3A-C517-4FE2-9C46-8DD6FF695803}" ShortID="604180494">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="PlayerSpeed" ID="{3449E4E4-DB47-4535-8534-ED756BFA4B44}" WorkUnitID="{0B32423B-AB13-428D-B64D-4FB5C4736929}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{022CCD3C-CBD1-4195-9E24-FB38B517D0A6}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>2.87783</XPos>
+																<YPos>0.03834</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>5</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{56B8B43E-3CEF-46F0-83CF-4835903DD0B6}" ShortID="337232715">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Pitch"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="PlayerSpeed" ID="{3449E4E4-DB47-4535-8534-ED756BFA4B44}" WorkUnitID="{0B32423B-AB13-428D-B64D-4FB5C4736929}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{DC744A95-7D65-441C-94AC-92CE9854865C}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-1048</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>2.54353</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>5</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_WitchFlyingLoop" ID="{FA2AA40A-933B-46C2-A220-D292E51E2670}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -196,6 +196,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="SFX_WitchFlyingLoop_Play" ID="{B40DF2DE-5DDD-425B-9B96-3594A20EDD12}">
+					<ChildrenList>
+						<Action Name="" ID="{F336EB03-069F-414A-97DE-7089F5363FA4}" ShortID="11293272">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_WitchFlyingLoop" ID="{5BFC4C08-3DAD-4B82-B670-2771D9BBF1D4}" WorkUnitID="{E4FA4BBD-3582-49B1-A62C-4954FA092211}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_WitchFlyingLoop_Stop" ID="{AF481EDF-E443-4AD1-ABDE-34ED03458247}">
+					<ChildrenList>
+						<Action Name="" ID="{19F42E9A-BA96-4374-9216-1312D2956420}" ShortID="782151526">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_WitchFlyingLoop" ID="{5BFC4C08-3DAD-4B82-B670-2771D9BBF1D4}" WorkUnitID="{E4FA4BBD-3582-49B1-A62C-4954FA092211}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

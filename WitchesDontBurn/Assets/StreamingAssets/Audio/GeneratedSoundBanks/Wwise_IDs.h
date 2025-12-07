@@ -23,6 +23,8 @@ namespace AK
         static const AkUniqueID SFX_ONFIRE_SMALL = 1853415142U;
         static const AkUniqueID SFX_PICKUPWATER_BIG = 1661332665U;
         static const AkUniqueID SFX_PICKUPWATER_SMALL = 1993946054U;
+        static const AkUniqueID SFX_WITCHFLYINGLOOP_PLAY = 770241710U;
+        static const AkUniqueID SFX_WITCHFLYINGLOOP_STOP = 1813357456U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
