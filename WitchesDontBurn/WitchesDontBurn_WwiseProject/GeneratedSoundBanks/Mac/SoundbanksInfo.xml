@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{9B1ADF5A-D9F3-A41E-0AD9-51938B06FFC4}">
+		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{CF086B33-FABE-1E63-A1D0-2254B70515A1}">
 			<ShortName>WDB_MasterSB</ShortName>
 			<Path>WDB_MasterSB.bnk</Path>
 			<Media>
@@ -147,6 +147,11 @@
 					<Path>Media/715733555.wem</Path>
 					<CachePath>SFX/SFX_WaterSpray_Loop_11A93380.wem</CachePath>
 				</File>
+				<File Id="732644073" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SFX_Ambulance.wav</ShortName>
+					<Path>Media/732644073.wem</Path>
+					<CachePath>SFX/SFX_Ambulance_818F3B66.wem</CachePath>
+				</File>
 				<File Id="770356160" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>VO_Help_Woman_1.wav</ShortName>
 					<CachePath>SFX/VO_Help_Woman_1_818F3B66.wem</CachePath>
@@ -270,14 +275,9 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="996302017" Name="Play_UI_ButtonClick" DurationType="OneShot" DurationMin="0.8682313" DurationMax="0.8682313">
+				<Event Id="493547557" Name="SFX_Ambulance" DurationType="OneShot" DurationMin="10.645215" DurationMax="10.645215">
 					<MediaRefs>
-						<MediaRef Id="176668512"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3314295595" Name="Play_UI_ButtonHover" DurationType="OneShot" DurationMin="0.22219954" DurationMax="0.22219954">
-					<MediaRefs>
-						<MediaRef Id="671635145"/>
+						<MediaRef Id="732644073"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="839254991" Name="SFX_FireOut" DurationType="OneShot" DurationMin="2.3847847" DurationMax="2.5320635">
@@ -344,6 +344,16 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="1813357456" Name="SFX_WitchFlyingLoop_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2157992122" Name="UI_ButtonClick" DurationType="OneShot" DurationMin="0.8682313" DurationMax="0.8682313">
+					<MediaRefs>
+						<MediaRef Id="176668512"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2027123568" Name="UI_ButtonHover" DurationType="OneShot" DurationMin="0.22219954" DurationMax="0.22219954">
+					<MediaRefs>
+						<MediaRef Id="671635145"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="85455021" Name="VO_Help_Boy" DurationType="OneShot" DurationMin="0.8115873" DurationMax="1.2533333">
 					<MediaRefs>
 						<MediaRef Id="235309314"/>
@@ -420,5 +430,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{70056837-324E-EE72-1BD2-2E9F43F63065}</FileHash>
+	<FileHash>{352F7152-EA02-14A5-CC0A-805002823568}</FileHash>
 </SoundBanksInfo>
