@@ -50,21 +50,32 @@ public class CatBehavior : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(walkDirection * walkSpeed, 0);
 
+        // 正確翻轉
         transform.localScale = new Vector3(-walkDirection, 1, 1);
 
-        // 偵測前方是否有牆
-        Vector2 origin = new Vector2(col.bounds.center.x + (walkDirection * col.bounds.extents.x), col.bounds.center.y);
+        // Ray 起點
+        Vector2 origin = new Vector2(
+            col.bounds.center.x + walkDirection * col.bounds.extents.x,
+            col.bounds.center.y
+        );
+
         Vector2 dir = new Vector2(walkDirection, 0);
 
-        RaycastHit2D hit = Physics2D.Raycast(origin, dir, wallCheckDistance, Wall);
         Debug.DrawRay(origin, dir * wallCheckDistance, Color.green);
 
-        if (hit.collider != null)
+        // -------- 這裡改成 RaycastAll，再用 tag 過濾 --------
+        RaycastHit2D[] hits = Physics2D.RaycastAll(origin, dir, wallCheckDistance);
+
+        foreach (var h in hits)
         {
-            // ★ 你說「碰到牆直接消失」
-            Destroy(gameObject);
+            if (h.collider != null && h.collider.CompareTag("wall"))
+            {
+                Destroy(gameObject);   // 貓消失
+                return;
+            }
         }
     }
+
 
     // -----------------------------
     //   跳窗 → 掉落 → 落地 → 開始走路

@@ -130,20 +130,38 @@ public class WaterDrop : MonoBehaviour
             rb.linearVelocity = new Vector2(0f, -Mathf.Abs(constantFallSpeed));
         }
 
-        // Ignore collisions with walls by finding all wall colliders and ignoring them
-        Collider2D[] wallColliders = GameObject.FindGameObjectsWithTag("wall")
-            .SelectMany(go => go.GetComponents<Collider2D>())
-            .ToArray();
-
+        // -------------------------------
+        // Ignore collisions with walls
+        // -------------------------------
         Collider2D waterCollider = instance.GetComponent<Collider2D>();
         if (waterCollider == null)
         {
             waterCollider = instance.AddComponent<BoxCollider2D>();
         }
 
-        foreach (Collider2D wallCollider in wallColliders)
+        // 找到所有牆 wall colliders
+        Collider2D[] wallColliders =
+            GameObject.FindGameObjectsWithTag("wall")
+                .SelectMany(go => go.GetComponents<Collider2D>())
+                .ToArray();
+
+        // 找到所有地板 ground colliders
+        Collider2D[] groundColliders =
+            GameObject.FindGameObjectsWithTag("ground")
+                .SelectMany(go => go.GetComponents<Collider2D>())
+                .ToArray();
+
+        // 忽略牆
+        foreach (Collider2D wall in wallColliders)
         {
-            Physics2D.IgnoreCollision(waterCollider, wallCollider, true);
+            Physics2D.IgnoreCollision(waterCollider, wall, true);
         }
+
+        // 忽略地板
+        foreach (Collider2D ground in groundColliders)
+        {
+            Physics2D.IgnoreCollision(waterCollider, ground, true);
+        }
+
     }
 }
