@@ -44,10 +44,12 @@ public class DetectTrigger : MonoBehaviour
         if (hitObject.CompareTag("BigWater"))
         {
             characterController.currentWater += 3;
+            AkSoundEngine.PostEvent("SFX_PickupWater_Big", gameObject);
         }
         else if (hitObject.CompareTag("SmallWater"))
         {
             characterController.currentWater += 1;
+            AkSoundEngine.PostEvent("SFX_PickupWater_Small", gameObject);
         }
 
         if (characterController.currentWater > 6)
