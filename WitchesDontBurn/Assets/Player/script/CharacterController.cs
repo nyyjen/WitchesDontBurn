@@ -44,6 +44,14 @@ public class CharacterController : MonoBehaviour
     public GameObject magicPrefab;
     [Tooltip("Cat prefab to spawn")]
     public GameObject catPrefab;
+    
+    [Header("Ambulance")]
+    [Tooltip("Maximum number of times player can call ambulance")]
+    public int maxAmbulanceCount = 3;
+    [Tooltip("Current remaining ambulance count")]
+    public int remainingAmbulanceCount = 3;
+    [Tooltip("Ambulance prefab")]
+    public GameObject ambulancePrefab;
 
 
     private void Start()
@@ -53,7 +61,31 @@ public class CharacterController : MonoBehaviour
         rb.gravityScale = 0f;
         rb.linearDamping = 0f;
         remainingTransformCount = maxTransformCount;
+        remainingAmbulanceCount = maxAmbulanceCount;
         AkSoundEngine.PostEvent("SFX_WitchFlyingLoop_Play", gameObject);
+    }
+    
+    public bool CanCallAmbulance()
+    {
+        return remainingAmbulanceCount > 0;
+    }
+    
+    public void UseAmbulanceCount()
+    {
+        if (remainingAmbulanceCount > 0)
+        {
+            remainingAmbulanceCount--;
+        }
+    }
+    
+    public void CallAmbulance()
+    {
+        if (!CanCallAmbulance() || ambulancePrefab == null) return;
+        
+        UseAmbulanceCount();
+        
+        // Spawn ambulance
+        Instantiate(ambulancePrefab, Vector3.zero, Quaternion.identity);
     }
     
     public bool CanTransformToCat()

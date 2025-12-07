@@ -4,12 +4,13 @@ using System.Collections;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    private InputAction flyActions, broomActions, shootWater, rightClickAction;
+    private InputAction flyActions, broomActions, shootWater, rightClickAction, jumpAction;
     private CharacterController characterController;
     private System.Action<InputAction.CallbackContext> carryCallback;
     // flags set by input callbacks, processed in Update to avoid doing game logic inside callbacks
     private bool broomRequested = false;
     private bool rightClickRequested = false;
+    private bool ambulanceRequested = false;
     private float holdTime = 0f;      
     private bool hasFired = false;
     private bool hasTriggeredWatering = false; // Track if isWatering trigger has been set  
@@ -22,6 +23,7 @@ public class PlayerInputHandler : MonoBehaviour
         broomActions = InputSystem.actions.FindAction("Interact");
         shootWater = InputSystem.actions.FindAction("Attack");
         rightClickAction = InputSystem.actions.FindAction("RightClick");
+        jumpAction = InputSystem.actions.FindAction("Jump");
         // prepare the callbacks so removes will always match adds
         // callbacks only set a flag — real work runs in Update()
         carryCallback = (ctx) => {
@@ -53,6 +55,12 @@ public class PlayerInputHandler : MonoBehaviour
             rightClickAction.performed += OnRightClick;
             rightClickAction.Enable();
         }
+        
+        if (jumpAction != null)
+        {
+            jumpAction.performed += OnJump;
+            jumpAction.Enable();
+        }
     }
 
     private void OnDisable()
@@ -74,9 +82,20 @@ public class PlayerInputHandler : MonoBehaviour
             rightClickAction.performed -= OnRightClick;
             rightClickAction.Disable();
         }
+        
+        if (jumpAction != null)
+        {
+            jumpAction.performed -= OnJump;
+            jumpAction.Disable();
+        }
 
         if (flyActions != null)
             flyActions.Disable();
+    }
+    
+    private void OnJump(InputAction.CallbackContext context)
+    {
+        ambulanceRequested = true;
     }
     
     private void OnRightClick(InputAction.CallbackContext context)
@@ -207,6 +226,16 @@ public class PlayerInputHandler : MonoBehaviour
         {
             rightClickRequested = false;
             HandleRightClickTransform();
+        }
+        
+        // Handle spacebar to call ambulance
+        if (ambulanceRequested)
+        {
+            ambulanceRequested = false;
+            if (characterController != null && characterController.CanCallAmbulance())
+            {
+                characterController.CallAmbulance();
+            }
         }
     }
     
