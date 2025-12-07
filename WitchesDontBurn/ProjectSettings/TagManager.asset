@@ -8,6 +8,9 @@ TagManager:
   - SmallWater
   - Window
   - NPC
+  - Pet
+  - ground
+  - wall
   layers:
   - Default
   - TransparentFX

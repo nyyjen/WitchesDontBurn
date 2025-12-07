@@ -456,7 +456,7 @@ PrefabInstance:
     - target: {fileID: 8632860837298924321, guid: 74527b2d194af4b75bc435bd8f2c752c, type: 3}
       propertyPath: data.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: 9ff7a6cc6f8cf2c4c864119572c32071, type: 2}
+      objectReference: {fileID: 11400000, guid: c794d233aa4394dfea3fb85795e20ef5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -499,7 +499,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 8dc17f09afb63c14ab28ccc51a516d72, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 08ace15bf3fed49919b1828a625b5348, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -568,8 +568,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindowManager
   timeToNextEvent: 1
-  Human: {fileID: 2710518084339324137, guid: f378fadee5aa4e74b85199ce81df916c, type: 3}
-  Pet: {fileID: 5911579606300573387, guid: 367a7c494e78fbc4fa5000846c975069, type: 3}
+  CharacterList:
+  - {fileID: 6488029167404266058, guid: 66d3d05055c3c894ba5a1f4771786dd4, type: 3}
+  - {fileID: 9061337513156448841, guid: 47e2b4bff97f84b49bef89ca3001f804, type: 3}
+  - {fileID: 2710518084339324137, guid: f378fadee5aa4e74b85199ce81df916c, type: 3}
+  - {fileID: 7044229662491276262, guid: bb53b581526ae5a45ab7458594cf00db, type: 3}
+  - {fileID: 1247789709177142573, guid: 6c662ab7d639cf249ba82940978ba6fb, type: 3}
+  AnimalList:
+  - {fileID: 7136704722771417830, guid: 15b265a349818ea4ebfe4cd917476fbf, type: 3}
+  - {fileID: 5911579606300573387, guid: 367a7c494e78fbc4fa5000846c975069, type: 3}
 --- !u!1 &559639715
 GameObject:
   m_ObjectHideFlags: 0

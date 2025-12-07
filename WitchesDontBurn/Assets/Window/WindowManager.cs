@@ -8,8 +8,8 @@ public class WindowManager : MonoBehaviour
 {
  
     [SerializeField] private float timeToNextEvent = 1.0f;
-    [SerializeField] private GameObject Human = null;
-    [SerializeField] private GameObject Pet = null;
+    [SerializeField] private GameObject[] CharacterList;
+    [SerializeField] private GameObject[] AnimalList;
     private float eventTimer = 0.0f;
 
 
@@ -71,15 +71,19 @@ public class WindowManager : MonoBehaviour
             {
                 if( w.IsOnFire() == false && w.HasBurntDown() == false )
                 {
-                   GameObject eventHuman = Instantiate(Human, w.transform.position, w.transform.rotation);
-                   Debug.Log(w.transform.parent.position);    
 
-                   if(eventHuman)
-                   {
-                        NPCs.Add( eventHuman );
-                        w.StartFire();
-                        Debug.Log("Created human fire event");
-                   }
+                    if( Random.Range(0, 2) == 1)
+                    {
+                        SpawnPet(w.gameObject);
+                        
+                    }
+                    else
+                    {
+                        SpawnHuman(w.gameObject);
+                    }
+
+                    w.StartFire();
+             
                 }
             }
             else
@@ -91,6 +95,27 @@ public class WindowManager : MonoBehaviour
             }
             
         }  
-    
-    }
+
+
+        public void SpawnHuman(GameObject obj)
+    {
+          int index = Random.Range(0, CharacterList.GetLength(0));
+          GameObject eventHuman = Instantiate(CharacterList[index], obj.transform.position, obj.transform.rotation);
+          NPCs.Add( eventHuman ); 
+          Debug.Log(CharacterList.Length);
+    }   
+
+    public void SpawnPet(GameObject obj)
+    {
+          int index = Random.Range(0, AnimalList.GetLength(0));
+          GameObject eventPet = Instantiate(AnimalList[index], obj.transform.position, obj.transform.rotation);
+          NPCs.Add( eventPet ); 
+          Debug.Log(AnimalList.Length);
+    }   
+}
+
+
+
+
+
 
