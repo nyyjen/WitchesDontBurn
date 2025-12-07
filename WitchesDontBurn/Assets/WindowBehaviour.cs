@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 
 
@@ -9,35 +10,48 @@ public class WindowBehaviour : MonoBehaviour
     [SerializeField] public bool isPet;
     [SerializeField] private bool isHuman;
 
-    [SerializeField] private static float maxTimeOnFire = 5.0f;
-    [SerializeField] private static float timeToFireIntensityChange = 2.5f;  
+    [SerializeField] private float maxTimeOnFire = 5.0f;
+    [SerializeField] private float timeToFireIntensityChange = 2.5f;  
+    [SerializeField] private float humanJumps = 4.5f;  
 
-    private bool intensityLevelUp = false;   
+    [SerializeField] private Sprite vfxSmallFire = null;
+    [SerializeField] private Sprite vfxMediumFire = null;
+    [SerializeField] private Sprite vfxBigFire = null;
+
+
+    private bool intensityLevelUp = false;  
+    private SpriteRenderer sr = null; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        sr = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if( onFire )
+        if( onFire && !HasBurntDown() )
         {
             timeOnFire += Time.deltaTime;
 
-            if( timeOnFire >= maxTimeOnFire )
+            if( timeOnFire >= humanJumps )
             {
                 // human will jump
                 // pet will die
-
-                //onFire = false;
 
             }
             else if(!intensityLevelUp && timeOnFire >= timeToFireIntensityChange)
             {
                 intensityLevelUp = true;
+
+                if ( sr && vfxMediumFire)
+                {
+                      sr.sprite = vfxMediumFire;
+                      float Xwidth = .75f / vfxMediumFire.bounds.size.x;
+                      float Ywidth = .75f / vfxMediumFire.bounds.size.y;
+                      sr.transform.localScale = new Vector3(Xwidth, Ywidth, 1);
+                }     
             }
         }
 
@@ -48,11 +62,38 @@ public class WindowBehaviour : MonoBehaviour
         onFire = true;
         timeOnFire = 0.0f;
         intensityLevelUp = false;
+
+        if( sr && vfxSmallFire )
+        {
+            sr.sprite = vfxSmallFire;
+            float Xwidth = .65f / vfxSmallFire.bounds.size.x;
+            float Ywidth = .65f / vfxSmallFire.bounds.size.y;
+            sr.transform.localScale = new Vector3(Xwidth, Ywidth, 1);
+        }
     }
 
     public void ResetWindow()
     {
         onFire = false;
+
+        if( sr )
+        {
+            sr.sprite = null;
+        }
+        
+    }
+
+    public void SetBurntWindow()
+    {
+        if( sr && vfxBigFire)
+        {
+            sr.sprite = vfxBigFire;
+            float Xwidth = .65f / vfxBigFire.bounds.size.x;
+            float Ywidth = .65f / vfxBigFire.bounds.size.y;
+            sr.transform.localScale = new Vector3(Xwidth, Ywidth, 1);
+        }
+
+        Debug.Log("Set burnt window");
     }
 
    public bool IsOnFire()
@@ -60,7 +101,7 @@ public class WindowBehaviour : MonoBehaviour
         return onFire;
     }
 
-    public bool BurntDown()
+    public bool HasBurntDown()
     {
         return (timeOnFire >= maxTimeOnFire);
     }

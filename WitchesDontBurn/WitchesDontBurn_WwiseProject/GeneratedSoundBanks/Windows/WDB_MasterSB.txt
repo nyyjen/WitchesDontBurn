@@ -30,6 +30,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 State	ID	Name	State Group			Notes
 	748895195	None	MusicState			
 	825489254	MusicGameplay	MusicState			
+	2054581592	MusicScore	MusicState			
 	4082046343	MusicMenu	MusicState			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -52,6 +53,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	276830193	SFX_FireOut_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireOut_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireOut\SFX_FireOut_0		210434
 	304114161	SFX_FireBurst_High_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireBurst_High_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireBurst_High\SFX_FireBurst_High_0		214108
 	306486513	VO_Help_Old_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Old_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO\VO_Help_Old\VO_Help_Old_1		295618
+	307686020	ES_Brain Fog - Stationary Sign	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\ES_Brain Fog - Stationary Sign_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\WDB_Music\WDB_Music_Score\ES_Brain Fog - Stationary Sign\ES_Brain Fog - Stationary Sign		33839496
 	308961409	VO_Help_Woman_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Woman_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO\VO_Help_Woman\VO_Help_Woman_0		52406
 	311109910	SFX_FireBurst_Low_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\SFX_FireBurst_Low_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireBurst_Low\SFX_FireBurst_Low_1		40380
 	314039841	VO_Help_Man_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Windows\SFX\VO_Help_Man_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO\VO_Help_Man\VO_Help_Man_0		64958

@@ -42,6 +42,7 @@ public class CharacterController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb.gravityScale = 0f;
         rb.linearDamping = 0f;
+        AkSoundEngine.PostEvent("SFX_WitchFlyingLoop_Play", gameObject);
     }
 
     private void FixedUpdate()
