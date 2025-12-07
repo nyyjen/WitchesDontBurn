@@ -49,6 +49,7 @@ namespace AK
             {
                 static const AkUniqueID MUSICGAMEPLAY = 825489254U;
                 static const AkUniqueID MUSICMENU = 4082046343U;
+                static const AkUniqueID MUSICSCORE = 2054581592U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace MUSICSTATE

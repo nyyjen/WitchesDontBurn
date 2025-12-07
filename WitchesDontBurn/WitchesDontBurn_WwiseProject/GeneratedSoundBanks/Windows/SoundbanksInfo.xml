@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{5F873D27-271B-A9F0-2F9D-1EB1FC12BE7B}">
+		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{BCE3C811-D114-0410-AA47-6C963789DEB2}">
 			<ShortName>WDB_MasterSB</ShortName>
 			<Path>WDB_MasterSB.bnk</Path>
 			<Media>
@@ -101,6 +101,10 @@
 				<File Id="306486513" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>VO_Help_Old_1.wav</ShortName>
 					<CachePath>SFX/VO_Help_Old_1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="307686020" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ES_Brain Fog - Stationary Sign.wav</ShortName>
+					<CachePath>SFX/ES_Brain Fog - Stationary Sign_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="308961409" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>VO_Help_Woman_0.wav</ShortName>
@@ -276,6 +280,12 @@
 								<MediaRef Id="208710280"/>
 							</MediaRefs>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1021618141" Id="2054581592"/>
+							<MediaRefs>
+								<MediaRef Id="307686020"/>
+							</MediaRefs>
+						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 				<Event Id="493547557" Name="SFX_Ambulance" DurationType="OneShot" DurationMin="9.170635" DurationMax="9.170635">
@@ -407,6 +417,7 @@
 					<States>
 						<State Id="748895195" Name="None"/>
 						<State Id="825489254" Name="MusicGameplay"/>
+						<State Id="2054581592" Name="MusicScore"/>
 						<State Id="4082046343" Name="MusicMenu"/>
 					</States>
 				</StateGroup>
@@ -432,11 +443,12 @@
 					<States>
 						<State Id="748895195" Name="None"/>
 						<State Id="825489254" Name="MusicGameplay"/>
+						<State Id="2054581592" Name="MusicScore"/>
 						<State Id="4082046343" Name="MusicMenu"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B01CC084-FB20-567D-0199-7387B8C697E5}</FileHash>
+	<FileHash>{82726884-D349-7379-36D0-D4D00EA29A6F}</FileHash>
 </SoundBanksInfo>
