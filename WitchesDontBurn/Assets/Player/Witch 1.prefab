@@ -223,8 +223,11 @@ MonoBehaviour:
   npcPrefabToDrop: {fileID: 0}
   maxTransformCount: 9
   remainingTransformCount: 9
-  magicPrefab: {fileID: 0}
-  catPrefab: {fileID: 0}
+  magicPrefab: {fileID: 5878487887854651421, guid: 7547ecfe62abca649a5d2000c9babd8f, type: 3}
+  catPrefab: {fileID: 8533443559562966914, guid: e5ce9aaae1df7f644bb6fe020f41eeff, type: 3}
+  maxAmbulanceCount: 3
+  remainingAmbulanceCount: 3
+  ambulancePrefab: {fileID: 3075245767247392893, guid: 312fcd7454c866a45982ca304fb4d953, type: 3}
 --- !u!50 &6465539111532162610
 Rigidbody2D:
   serializedVersion: 5
