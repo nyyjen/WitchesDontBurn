@@ -9,10 +9,25 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{4AB2D42A-14C7-42EE-938D-D5E692ECCF04}">
+		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{D7F4577E-7773-9F0B-7F1D-DE5131597B73}">
 			<ShortName>WDB_MasterSB</ShortName>
 			<Path>WDB_MasterSB.bnk</Path>
 			<Media>
+				<File Id="61657902" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>Amb_Scatterer_4.wav</ShortName>
+					<Path>Media/61657902.wem</Path>
+					<CachePath>SFX/Amb_Scatterer_4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="63265067" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>Amb_Scatterer_2.wav</ShortName>
+					<Path>Media/63265067.wem</Path>
+					<CachePath>SFX/Amb_Scatterer_2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="72938217" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>Amb_Scatterer_1.wav</ShortName>
+					<Path>Media/72938217.wem</Path>
+					<CachePath>SFX/Amb_Scatterer_1_818F3B66.wem</CachePath>
+				</File>
 				<File Id="125960812" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireOut_2.wav</ShortName>
 					<CachePath>SFX/SFX_FireOut_2_818F3B66.wem</CachePath>
@@ -20,6 +35,11 @@
 				<File Id="130284267" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireOut_1.wav</ShortName>
 					<CachePath>SFX/SFX_FireOut_1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="167283912" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>Amb_Loop.wav</ShortName>
+					<Path>Media/167283912.wem</Path>
+					<CachePath>SFX/Amb_Loop_ADDBA327.wem</CachePath>
 				</File>
 				<File Id="177974528" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireBurst_Low_3.wav</ShortName>
@@ -34,9 +54,17 @@
 					<ShortName>WDB_Music_Intro.wav</ShortName>
 					<CachePath>SFX/WDB_Music_Intro_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="221818399" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_MagicHit_Cat_3.wav</ShortName>
+					<CachePath>SFX/SFX_MagicHit_Cat_3_818F3B66.wem</CachePath>
+				</File>
 				<File Id="225232292" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireBurst_High_1.wav</ShortName>
 					<CachePath>SFX/SFX_FireBurst_High_1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="260053559" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_MagicHit_Cat_1.wav</ShortName>
+					<CachePath>SFX/SFX_MagicHit_Cat_1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="276830193" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireOut_0.wav</ShortName>
@@ -50,10 +78,19 @@
 					<ShortName>SFX_FireBurst_Low_1.wav</ShortName>
 					<CachePath>SFX/SFX_FireBurst_Low_1_818F3B66.wem</CachePath>
 				</File>
+				<File Id="364020103" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_MagicHit_Cat_0.wav</ShortName>
+					<CachePath>SFX/SFX_MagicHit_Cat_0_818F3B66.wem</CachePath>
+				</File>
 				<File Id="446594407" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SFX_FireLoop_Low_0.wav</ShortName>
 					<Path>Media/446594407.wem</Path>
 					<CachePath>SFX/SFX_FireLoop_Low_0_0ED99DD8.wem</CachePath>
+				</File>
+				<File Id="526404489" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>Amb_Scatterer_3.wav</ShortName>
+					<Path>Media/526404489.wem</Path>
+					<CachePath>SFX/Amb_Scatterer_3_818F3B66.wem</CachePath>
 				</File>
 				<File Id="630890796" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SFX_FireLoop_Low_1.wav</ShortName>
@@ -68,25 +105,79 @@
 					<ShortName>SFX_FireBurst_Low_2.wav</ShortName>
 					<CachePath>SFX/SFX_FireBurst_Low_2_818F3B66.wem</CachePath>
 				</File>
+				<File Id="791978057" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_MagicHit_Cat_2.wav</ShortName>
+					<CachePath>SFX/SFX_MagicHit_Cat_2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="793362413" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SFX_FireLoop_High_0.wav</ShortName>
 					<Path>Media/793362413.wem</Path>
 					<CachePath>SFX/SFX_FireLoop_High_0_4106BC05.wem</CachePath>
 				</File>
+				<File Id="797972709" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>Amb_Scatterer_6.wav</ShortName>
+					<Path>Media/797972709.wem</Path>
+					<CachePath>SFX/Amb_Scatterer_6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="813118264" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>Amb_Scatterer_5.wav</ShortName>
+					<Path>Media/813118264.wem</Path>
+					<CachePath>SFX/Amb_Scatterer_5_818F3B66.wem</CachePath>
+				</File>
 				<File Id="830636734" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireBurst_Low_0.wav</ShortName>
 					<CachePath>SFX/SFX_FireBurst_Low_0_818F3B66.wem</CachePath>
+				</File>
+				<File Id="834482289" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_MagicHit.wav</ShortName>
+					<CachePath>SFX/SFX_MagicHit_818F3B66.wem</CachePath>
+				</File>
+				<File Id="840094612" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_MagicCast.wav</ShortName>
+					<CachePath>SFX/SFX_MagicCast_818F3B66.wem</CachePath>
 				</File>
 				<File Id="914571091" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_FireBurst_High_3.wav</ShortName>
 					<CachePath>SFX/SFX_FireBurst_High_3_818F3B66.wem</CachePath>
 				</File>
+				<File Id="915939656" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>Amb_Scatterer_0.wav</ShortName>
+					<Path>Media/915939656.wem</Path>
+					<CachePath>SFX/Amb_Scatterer_0_818F3B66.wem</CachePath>
+				</File>
+				<File Id="918590193" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_PickupWater_Small.wav</ShortName>
+					<CachePath>SFX/SFX_PickupWater_Small_818F3B66.wem</CachePath>
+				</File>
+				<File Id="923803691" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_PickupWater_Big.wav</ShortName>
+					<CachePath>SFX/SFX_PickupWater_Big_818F3B66.wem</CachePath>
+				</File>
 				<File Id="1061503968" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WDB_Music_Loop.wav</ShortName>
 					<CachePath>SFX/WDB_Music_Loop_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="1062715346" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>Amb_Scatterer_7.wav</ShortName>
+					<Path>Media/1062715346.wem</Path>
+					<CachePath>SFX/Amb_Scatterer_7_818F3B66.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="2381502256" Name="Amb_Play" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="61657902"/>
+						<MediaRef Id="63265067"/>
+						<MediaRef Id="72938217"/>
+						<MediaRef Id="167283912"/>
+						<MediaRef Id="526404489"/>
+						<MediaRef Id="797972709"/>
+						<MediaRef Id="813118264"/>
+						<MediaRef Id="915939656"/>
+						<MediaRef Id="1062715346"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="729984210" Name="Amb_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="202194903" Name="Music_Play" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="208710280"/>
@@ -98,6 +189,20 @@
 						<MediaRef Id="125960812"/>
 						<MediaRef Id="130284267"/>
 						<MediaRef Id="276830193"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1851655779" Name="SFX_MagicCast" DurationType="OneShot" DurationMin="0.5219274" DurationMax="0.5219274">
+					<MediaRefs>
+						<MediaRef Id="840094612"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1165918729" Name="SFX_MagicHit" DurationType="OneShot" DurationMin="3.8348527" DurationMax="4.1980495">
+					<MediaRefs>
+						<MediaRef Id="221818399"/>
+						<MediaRef Id="260053559"/>
+						<MediaRef Id="364020103"/>
+						<MediaRef Id="791978057"/>
+						<MediaRef Id="834482289"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="656410073" Name="SFX_OnFire_Big" DurationType="Infinite">
@@ -120,6 +225,16 @@
 						<MediaRef Id="830636734"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1661332665" Name="SFX_PickupWater_Big" DurationType="OneShot" DurationMin="0.56315196" DurationMax="0.56315196">
+					<MediaRefs>
+						<MediaRef Id="923803691"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1993946054" Name="SFX_PickupWater_Small" DurationType="OneShot" DurationMin="0.47705215" DurationMax="0.47705215">
+					<MediaRefs>
+						<MediaRef Id="918590193"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
@@ -136,5 +251,5 @@
 			</Busses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9D53A6E2-021A-7998-C7B5-C4635FDC5603}</FileHash>
+	<FileHash>{FDF74EBD-CC5F-1213-8D25-C9FE453FC49F}</FileHash>
 </SoundBanksInfo>

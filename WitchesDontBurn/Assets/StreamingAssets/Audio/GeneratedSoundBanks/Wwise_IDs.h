@@ -13,10 +13,16 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMB_PLAY = 2381502256U;
+        static const AkUniqueID AMB_STOP = 729984210U;
         static const AkUniqueID MUSIC_PLAY = 202194903U;
         static const AkUniqueID SFX_FIREOUT = 839254991U;
+        static const AkUniqueID SFX_MAGICCAST = 1851655779U;
+        static const AkUniqueID SFX_MAGICHIT = 1165918729U;
         static const AkUniqueID SFX_ONFIRE_BIG = 656410073U;
         static const AkUniqueID SFX_ONFIRE_SMALL = 1853415142U;
+        static const AkUniqueID SFX_PICKUPWATER_BIG = 1661332665U;
+        static const AkUniqueID SFX_PICKUPWATER_SMALL = 1993946054U;
     } // namespace EVENTS
 
     namespace BANKS

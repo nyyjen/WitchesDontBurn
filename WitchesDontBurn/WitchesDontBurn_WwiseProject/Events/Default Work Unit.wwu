@@ -74,6 +74,10 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="SFX_FireOut" ID="{CB32F3FF-93BB-4762-9F5F-A56A5102963F}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{5DE632C4-87F9-4E2D-86BE-94586FE5F619}" ShortID="344112716">
 							<ReferenceList>
@@ -127,6 +131,66 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Amb" ID="{57B00F8E-4A7C-4876-B2A8-34C6A35159AE}" WorkUnitID="{0841E476-B95A-4A3F-91AD-4AE20C2C2643}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_PickupWater_Big" ID="{F6B46B6E-FC6E-4968-A773-1ECD262BBCD5}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{E78B3FC0-9F2A-4D46-93F0-3BF184FDD3DC}" ShortID="486001705">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_PickupWater_Big" ID="{673C2BE9-41C4-48E3-8E1F-44089CB5EE05}" WorkUnitID="{E4FA4BBD-3582-49B1-A62C-4954FA092211}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_PickupWater_Small" ID="{D3DDFC65-26F0-402B-8454-CE0620A9CC9B}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{DC565F11-8CD0-4680-BF93-CBB95A9460A7}" ShortID="77060197">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_PickupWater_Small" ID="{2CFE0515-D91A-4F4B-9913-AB49EF356FC2}" WorkUnitID="{E4FA4BBD-3582-49B1-A62C-4954FA092211}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_MagicCast" ID="{606C209E-9AA3-4516-89E9-505DA236D827}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{865C3553-B9F6-462E-AA4A-4FE05C8A159E}" ShortID="841236349">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_MagicCast" ID="{A9E6DC49-6A2A-4A1D-9CD0-0316AC6976E5}" WorkUnitID="{E4FA4BBD-3582-49B1-A62C-4954FA092211}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_MagicHit" ID="{69B3D2DA-A436-4A73-88B2-A5D4F3A5B902}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{E84E5D3E-72C6-4B5D-848E-BD42C62FA7D8}" ShortID="22569979">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_MagicHit" ID="{09A3AEE9-1091-4BB8-B297-DDF801EF0D43}" WorkUnitID="{E4FA4BBD-3582-49B1-A62C-4954FA092211}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
