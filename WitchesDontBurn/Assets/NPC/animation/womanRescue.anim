@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: catLanding
+  m_Name: womanRescue
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -7725003465814851970, guid: f9d8bd2f5188172458008d89b588be4b, type: 3}
+      value: {fileID: -6093782297282927733, guid: 325641f881b961a44999f1f99d4364e7, type: 3}
     - time: 0.083333336
-      value: {fileID: -6465286825719688750, guid: cda42bfdb65f8264fb16ba0befb19b55, type: 3}
+      value: {fileID: 1986611442543793941, guid: 19b3864bf5d9eed4b84a59964bc2d893, type: 3}
+    - time: 0.16666667
+      value: {fileID: -1447929489591432124, guid: b0293c5ab9c36f646907422ae3cfa71e, type: 3}
+    - time: 0.25
+      value: {fileID: 2559202383110521957, guid: 587b3c010ab67d9419fe1686b824cfe0, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,14 +50,16 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -7725003465814851970, guid: f9d8bd2f5188172458008d89b588be4b, type: 3}
-    - {fileID: -6465286825719688750, guid: cda42bfdb65f8264fb16ba0befb19b55, type: 3}
+    - {fileID: -6093782297282927733, guid: 325641f881b961a44999f1f99d4364e7, type: 3}
+    - {fileID: 1986611442543793941, guid: 19b3864bf5d9eed4b84a59964bc2d893, type: 3}
+    - {fileID: -1447929489591432124, guid: b0293c5ab9c36f646907422ae3cfa71e, type: 3}
+    - {fileID: 2559202383110521957, guid: 587b3c010ab67d9419fe1686b824cfe0, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.16666667
+    m_StopTime: 0.33333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

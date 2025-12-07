@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 7ac9b33dd008b940bd6d576d044e1015
     GuidInternal: 
-    m_lastTime: -8584365223056147321
+    m_lastTime: -8584365182055611128
     List:
     - name: Amb_Play
       guid: f09d92dc1cc6d843bf0331bb7a40171a
@@ -147,9 +147,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_UI_ButtonClick
-      guid: 4f8c015fe66d124b8e84d076e2826f53
-      id: 996302017
+    - name: SFX_Ambulance
+      guid: b5412ef16a2b594f8b00d823060721a7
+      id: 493547557
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -157,30 +157,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 7ac9b33dd008b940bd6d576d044e1015
-      - ElementName: Play_UI_ButtonClick
+      - ElementName: SFX_Ambulance
         ObjectType: 3
-        guid: 4f8c015fe66d124b8e84d076e2826f53
-      Path: Events\Default Work Unit\Play_UI_ButtonClick
+        guid: b5412ef16a2b594f8b00d823060721a7
+      Path: Events\Default Work Unit\SFX_Ambulance
       maxAttenuation: 0
-      maxDuration: 0.8682313
-      minDuration: 0.8682313
-    - name: Play_UI_ButtonHover
-      guid: 1394aea9f887a44c8e871983e5b06df3
-      id: 3314295595
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 7ac9b33dd008b940bd6d576d044e1015
-      - ElementName: Play_UI_ButtonHover
-        ObjectType: 3
-        guid: 1394aea9f887a44c8e871983e5b06df3
-      Path: Events\Default Work Unit\Play_UI_ButtonHover
-      maxAttenuation: 0
-      maxDuration: 0.22219954
-      minDuration: 0.22219954
+      maxDuration: 9.170635
+      minDuration: 9.170635
     - name: SFX_FireOut
       guid: fff332cbbb9362479f5fa56a5102963f
       id: 839254991
@@ -300,6 +283,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.47705215
       minDuration: 0.47705215
+    - name: SFX_ResidentRescued
+      guid: b8831754cabc7e419e35ce2dc94342b9
+      id: 3715780598
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: SFX_ResidentRescued
+        ObjectType: 3
+        guid: b8831754cabc7e419e35ce2dc94342b9
+      Path: Events\Default Work Unit\SFX_ResidentRescued
+      maxAttenuation: 0
+      maxDuration: 0.81292516
+      minDuration: 0.81292516
     - name: SFX_WaterSpray_Play
       guid: 12d9f401c73c60419a46272f502d2b9b
       id: 1728813734
@@ -368,6 +368,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: UI_ButtonClick
+      guid: 4f8c015fe66d124b8e84d076e2826f53
+      id: 2157992122
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: UI_ButtonClick
+        ObjectType: 3
+        guid: 4f8c015fe66d124b8e84d076e2826f53
+      Path: Events\Default Work Unit\UI_ButtonClick
+      maxAttenuation: 0
+      maxDuration: 0.8682313
+      minDuration: 0.8682313
+    - name: UI_ButtonHover
+      guid: 1394aea9f887a44c8e871983e5b06df3
+      id: 2027123568
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7ac9b33dd008b940bd6d576d044e1015
+      - ElementName: UI_ButtonHover
+        ObjectType: 3
+        guid: 1394aea9f887a44c8e871983e5b06df3
+      Path: Events\Default Work Unit\UI_ButtonHover
+      maxAttenuation: 0
+      maxDuration: 0.22219954
+      minDuration: 0.22219954
     - name: VO_Help_Boy
       guid: 0ceb7b2fb3f31c4091ea3a6875570491
       id: 85455021
