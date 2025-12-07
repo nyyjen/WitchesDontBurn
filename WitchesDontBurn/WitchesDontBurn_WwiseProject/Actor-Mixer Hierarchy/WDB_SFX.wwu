@@ -969,6 +969,50 @@
 						</Sound>
 					</ChildrenList>
 				</BlendContainer>
+				<Sound Name="SFX_Ambulance_2" ID="{C48A8B86-FF1E-4A22-87DF-F1883C103D14}" ShortID="847569052">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25999D80-3750-4045-9363-21B1E831D29D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8BAD3FF8-3664-47EE-A7F9-A3392133EA67}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Ambulance_2" ID="{58A8E580-5DE2-48A3-9B94-3A82A044E469}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Ambulance_2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="327702583"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Ambulance_2" ID="{58A8E580-5DE2-48A3-9B94-3A82A044E469}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_ResidentRescued" ID="{70F3DC15-1952-46D1-BE86-680B09A3041E}" ShortID="248384463">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25999D80-3750-4045-9363-21B1E831D29D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8BAD3FF8-3664-47EE-A7F9-A3392133EA67}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_ResidentRescued" ID="{CA579BB1-084E-4207-8D0A-FB4E5CA76B45}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_ResidentRescued.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="965481071"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_ResidentRescued" ID="{CA579BB1-084E-4207-8D0A-FB4E5CA76B45}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

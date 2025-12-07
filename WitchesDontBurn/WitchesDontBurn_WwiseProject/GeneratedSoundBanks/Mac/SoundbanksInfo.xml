@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{CF086B33-FABE-1E63-A1D0-2254B70515A1}">
+		<SoundBank Id="922085032" Type="User" Language="SFX" Hash="{5F873D27-271B-A9F0-2F9D-1EB1FC12BE7B}">
 			<ShortName>WDB_MasterSB</ShortName>
 			<Path>WDB_MasterSB.bnk</Path>
 			<Media>
@@ -114,6 +114,10 @@
 					<ShortName>VO_Help_Man_0.wav</ShortName>
 					<CachePath>SFX/VO_Help_Man_0_818F3B66.wem</CachePath>
 				</File>
+				<File Id="327702583" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Ambulance_2.wav</ShortName>
+					<CachePath>SFX/SFX_Ambulance_2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="364020103" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_MagicHit_Cat_0.wav</ShortName>
 					<CachePath>SFX/SFX_MagicHit_Cat_0_818F3B66.wem</CachePath>
@@ -146,11 +150,6 @@
 					<ShortName>SFX_WaterSpray_Loop.wav</ShortName>
 					<Path>Media/715733555.wem</Path>
 					<CachePath>SFX/SFX_WaterSpray_Loop_11A93380.wem</CachePath>
-				</File>
-				<File Id="732644073" Language="SFX" Streaming="true" Location="Loose">
-					<ShortName>SFX_Ambulance.wav</ShortName>
-					<Path>Media/732644073.wem</Path>
-					<CachePath>SFX/SFX_Ambulance_818F3B66.wem</CachePath>
 				</File>
 				<File Id="770356160" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>VO_Help_Woman_1.wav</ShortName>
@@ -220,6 +219,10 @@
 					<ShortName>VO_Help_Man_1.wav</ShortName>
 					<CachePath>SFX/VO_Help_Man_1_818F3B66.wem</CachePath>
 				</File>
+				<File Id="965481071" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_ResidentRescued.wav</ShortName>
+					<CachePath>SFX/SFX_ResidentRescued_818F3B66.wem</CachePath>
+				</File>
 				<File Id="1000305893" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>VO_Help_Old_0.wav</ShortName>
 					<CachePath>SFX/VO_Help_Old_0_818F3B66.wem</CachePath>
@@ -275,9 +278,9 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="493547557" Name="SFX_Ambulance" DurationType="OneShot" DurationMin="10.645215" DurationMax="10.645215">
+				<Event Id="493547557" Name="SFX_Ambulance" DurationType="OneShot" DurationMin="9.170635" DurationMax="9.170635">
 					<MediaRefs>
-						<MediaRef Id="732644073"/>
+						<MediaRef Id="327702583"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="839254991" Name="SFX_FireOut" DurationType="OneShot" DurationMin="2.3847847" DurationMax="2.5320635">
@@ -329,6 +332,11 @@
 				<Event Id="1993946054" Name="SFX_PickupWater_Small" DurationType="OneShot" DurationMin="0.47705215" DurationMax="0.47705215">
 					<MediaRefs>
 						<MediaRef Id="918590193"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3715780598" Name="SFX_ResidentRescued" DurationType="OneShot" DurationMin="0.81292516" DurationMax="0.81292516">
+					<MediaRefs>
+						<MediaRef Id="965481071"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1728813734" Name="SFX_WaterSpray_Play" DurationType="Infinite">
@@ -430,5 +438,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{352F7152-EA02-14A5-CC0A-805002823568}</FileHash>
+	<FileHash>{09D35897-39B2-7A85-159C-2EE0FE6A3A44}</FileHash>
 </SoundBanksInfo>

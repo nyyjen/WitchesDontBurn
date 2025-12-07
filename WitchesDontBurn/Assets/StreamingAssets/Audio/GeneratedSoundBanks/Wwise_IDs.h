@@ -24,6 +24,7 @@ namespace AK
         static const AkUniqueID SFX_ONFIRE_SMALL = 1853415142U;
         static const AkUniqueID SFX_PICKUPWATER_BIG = 1661332665U;
         static const AkUniqueID SFX_PICKUPWATER_SMALL = 1993946054U;
+        static const AkUniqueID SFX_RESIDENTRESCUED = 3715780598U;
         static const AkUniqueID SFX_WATERSPRAY_PLAY = 1728813734U;
         static const AkUniqueID SFX_WATERSPRAY_STOP = 3579918232U;
         static const AkUniqueID SFX_WITCHFLYINGLOOP_PLAY = 770241710U;

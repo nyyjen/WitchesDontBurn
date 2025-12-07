@@ -396,10 +396,21 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{EEF9518D-BF81-4EC7-B4E3-78F4A0428BB0}" ShortID="959759622">
+						<Action Name="" ID="{6ED48689-D9B2-4439-989B-8C4956A858EE}" ShortID="960526256">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_Ambulance" ID="{9A95820A-2297-4D84-9720-1570D075DA07}" WorkUnitID="{62AF510D-413B-481D-A989-F14C978987CE}"/>
+									<ObjectRef Name="SFX_Ambulance_2" ID="{C48A8B86-FF1E-4A22-87DF-F1883C103D14}" WorkUnitID="{62AF510D-413B-481D-A989-F14C978987CE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_ResidentRescued" ID="{541783B8-BCCA-417E-9E35-CE2DC94342B9}">
+					<ChildrenList>
+						<Action Name="" ID="{C3079999-FBE5-48F9-9880-358594615590}" ShortID="577430423">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_ResidentRescued" ID="{70F3DC15-1952-46D1-BE86-680B09A3041E}" WorkUnitID="{62AF510D-413B-481D-A989-F14C978987CE}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -19,6 +19,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2157992122	UI_ButtonClick			\Default Work Unit\UI_ButtonClick	
 	2381502256	Amb_Play			\Default Work Unit\Amb_Play	
 	3579918232	SFX_WaterSpray_Stop			\Default Work Unit\SFX_WaterSpray_Stop	
+	3715780598	SFX_ResidentRescued			\Default Work Unit\SFX_ResidentRescued	
 	3795030108	VO_Help_Old			\Default Work Unit\VO_Help_Old	
 	3844524185	VO_Help_Dog			\Default Work Unit\VO_Help_Dog	
 	3946322943	VO_Help_Man			\Default Work Unit\VO_Help_Man	
@@ -54,6 +55,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	308961409	VO_Help_Woman_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\VO_Help_Woman_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO\VO_Help_Woman\VO_Help_Woman_0		52406
 	311109910	SFX_FireBurst_Low_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_FireBurst_Low_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireBurst_Low\SFX_FireBurst_Low_1		40380
 	314039841	VO_Help_Man_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\VO_Help_Man_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO\VO_Help_Man\VO_Help_Man_0		64958
+	327702583	SFX_Ambulance_2	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_Ambulance_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_Ambulance_2		1617796
 	364020103	SFX_MagicHit_Cat_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_MagicHit_Cat_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_MagicHit\SFX_MagicHit_Cat\SFX_MagicHit_Cat_0		319188
 	671635145	UI_ButtonHover	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\UI_ButtonHover_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_ButtonHover		39292
 	770356160	VO_Help_Woman_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\VO_Help_Woman_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO\VO_Help_Woman\VO_Help_Woman_1		121352
@@ -68,6 +70,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	918590193	SFX_PickupWater_Small	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_PickupWater_Small_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_PickupWater_Small		84248
 	923803691	SFX_PickupWater_Big	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_PickupWater_Big_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_PickupWater_Big		99436
 	962416540	VO_Help_Man_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\VO_Help_Man_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO\VO_Help_Man\VO_Help_Man_1		147410
+	965481071	SFX_ResidentRescued	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_ResidentRescued_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_ResidentRescued		71796
 	1000305893	VO_Help_Old_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\VO_Help_Old_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO\VO_Help_Old\VO_Help_Old_0		161114
 	1035401071	VO_Help_Girl_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\VO_Help_Girl_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO\VO_Help_Girl\VO_Help_Girl_0		150442
 	1061503968	WDB_Music_Loop	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\WDB_Music_Loop_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\WDB_Music\WDB_Music_Loop\WDB_Music_Loop\WDB_Music_Loop		13827836
@@ -83,7 +86,6 @@ Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	
 	526404489	Amb_Scatterer_3	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\Amb_Scatterer_3_818F3B66.wem	526404489.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_Ambience\Amb\Amb_Scatterer\Amb_Scatterer_3	
 	630890796	SFX_FireLoop_Low_1	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_FireLoop_Low_1_851C9E6C.wem	630890796.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireLoop_Low\SFX_FireLoop_Low_1	
 	715733555	SFX_WaterSpray_Loop	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_WaterSpray_Loop_11A93380.wem	715733555.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_WaterSpray\SFX_WaterSpray_Loop	
-	732644073	SFX_Ambulance	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_Ambulance_818F3B66.wem	732644073.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_Ambulance	
 	793362413	SFX_FireLoop_High_0	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\SFX_FireLoop_High_0_4106BC05.wem	793362413.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_SFX\SFX_FireLoop_High\SFX_FireLoop_High_0	
 	797972709	Amb_Scatterer_6	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\Amb_Scatterer_6_818F3B66.wem	797972709.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_Ambience\Amb\Amb_Scatterer\Amb_Scatterer_6	
 	813118264	Amb_Scatterer_5	C:\Users\Tracy Chang\Documents\WitchesDontBurn\WitchesDontBurn\WitchesDontBurn_WwiseProject\.cache\Mac\SFX\Amb_Scatterer_5_818F3B66.wem	813118264.wem	\Actor-Mixer Hierarchy\Default Work Unit\WDB_Ambience\Amb\Amb_Scatterer\Amb_Scatterer_5	
